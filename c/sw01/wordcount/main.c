@@ -20,6 +20,7 @@
  */
 
 /*
+ * Counts words in input stream
  * @author daniw
  */
 int main(int argc, char** argv)
