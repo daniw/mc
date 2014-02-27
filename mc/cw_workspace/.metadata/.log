@@ -1,0 +1,463 @@
+!SESSION 2014-02-27 20:29:53.376 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+This is a continuation of log file C:\Daten\Daniel\studium\git_repo\sem4\mc\mc\cw_workspace\.metadata\.bak_0.log
+Created Time: 2014-02-27 22:57:45.677
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:45.677
+!MESSAGE Cannot decode string # Each subdirectory must supply rules for building sources it contributes
+Lib_Sources/_hcs08/mc9s08jm60_c.obj: ../Lib_Sources/_hcs08/mc9s08jm60.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #1 $<'
+	@echo 'Invoking: HCS08 Compiler'
+	"$(HC08ToolsEnv)/chc08" -ArgFile"Lib_Sources/_hcs08/mc9s08jm60.args" -ObjN="Lib_Sources/_hcs08/mc9s08jm60_c.obj" "$<" -Lm="$(@:%.obj=%.d)" -LmCfg=xilmou
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Lib_Sources/_hcs08/%.d: ../Lib_Sources/_hcs08/%.c
+	@echo 'Regenerating dependency file: $@'
+	
+	@echo ' '
+
+Lib_Sources/_hcs08/start08_c.obj: ../Lib_Sources/_hcs08/start08.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #2 $<'
+	@echo 'Invoking: HCS08 Compiler'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForSource(CoreIDEMakefileGenerator.java:3792)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addFragmentMakefileEntriesForSource(CoreIDEMakefileGenerator.java:2936)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addSources(CoreIDEMakefileGenerator.java:2817)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateFragmentMakefile(CoreIDEMakefileGenerator.java:1675)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1246)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:467)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:540)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:459)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:397)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:45.679
+!MESSAGE Cannot decode string /MC_Library/Lib_Sources/_hcs08/start08.c
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForSource(CoreIDEMakefileGenerator.java:3794)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addFragmentMakefileEntriesForSource(CoreIDEMakefileGenerator.java:2936)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addSources(CoreIDEMakefileGenerator.java:2817)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateFragmentMakefile(CoreIDEMakefileGenerator.java:1675)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1246)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:467)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:540)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:459)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:397)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:45.735
+!MESSAGE Cannot decode string # Tool invocations
+MC_Library.lib: $(OBJS) $(USER_OBJS)
+	@echo 'Building target: $@'
+	@echo 'Executing target #3 $@'
+	@echo 'Invoking: S08 Libmaker'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForTool(CoreIDEMakefileGenerator.java:456)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargetsRules(CoreIDEMakefileGenerator.java:2435)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargets(CoreIDEMakefileGenerator.java:2222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateTopMakefile(CoreIDEMakefileGenerator.java:1907)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1265)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:467)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:540)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:459)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:397)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:46.078
+!MESSAGE Cannot decode string # Each subdirectory must supply rules for building sources it contributes
+Sources/main_asm.obj: ../Sources/main.asm
+	@echo 'Building file: $<'
+	@echo 'Executing target #1 $<'
+	@echo 'Invoking: HCS08 Assembler'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForSource(CoreIDEMakefileGenerator.java:3792)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addFragmentMakefileEntriesForSource(CoreIDEMakefileGenerator.java:2936)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addSources(CoreIDEMakefileGenerator.java:2817)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateFragmentMakefile(CoreIDEMakefileGenerator.java:1675)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1246)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:467)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:540)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:459)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:397)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:46.079
+!MESSAGE Cannot decode string /Test/Sources/main.asm
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForSource(CoreIDEMakefileGenerator.java:3794)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addFragmentMakefileEntriesForSource(CoreIDEMakefileGenerator.java:2936)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addSources(CoreIDEMakefileGenerator.java:2817)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateFragmentMakefile(CoreIDEMakefileGenerator.java:1675)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1246)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:467)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:540)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:459)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:397)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:46.156
+!MESSAGE Cannot decode string # Tool invocations
+Test.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
+	@echo 'Building target: $@'
+	@echo 'Executing target #2 $@'
+	@echo 'Invoking: S08 Linker'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForTool(CoreIDEMakefileGenerator.java:456)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargetsRules(CoreIDEMakefileGenerator.java:2435)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargets(CoreIDEMakefileGenerator.java:2222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateTopMakefile(CoreIDEMakefileGenerator.java:1907)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1265)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:467)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:540)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:459)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:397)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:46.158
+!MESSAGE Cannot decode string # Tool invocations
+Test.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
+	@echo 'Building target: $@'
+	@echo 'Executing target #2 $@'
+	@echo 'Invoking: S08 Linker'
+	"$(HC08ToolsEnv)/linker" -ArgFile"Test.args" -O"Test.abs"
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+Test.abs.s19: $(BBL_SRCS) $(EXECUTABLES)
+	@echo 'Executing target #3 $@'
+	@echo 'Invoking: S08 Burner'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForTool(CoreIDEMakefileGenerator.java:456)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForTool(CoreIDEMakefileGenerator.java:206)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateRulesForConsumers(CoreIDEMakefileGenerator.java:2605)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargetsRules(CoreIDEMakefileGenerator.java:2445)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargets(CoreIDEMakefileGenerator.java:2222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateTopMakefile(CoreIDEMakefileGenerator.java:1907)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1265)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:467)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:540)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:459)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:397)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:50.487
+!MESSAGE Cannot decode string # Each subdirectory must supply rules for building sources it contributes
+Sources/main_asm.obj: ../Sources/main.asm
+	@echo 'Building file: $<'
+	@echo 'Executing target #1 $<'
+	@echo 'Invoking: HCS08 Assembler'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForSource(CoreIDEMakefileGenerator.java:3792)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addFragmentMakefileEntriesForSource(CoreIDEMakefileGenerator.java:2936)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addSources(CoreIDEMakefileGenerator.java:2817)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateFragmentMakefile(CoreIDEMakefileGenerator.java:1675)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1246)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:312)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:487)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:650)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2391)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:629)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:133)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate.buildForLaunch(AbstractCLaunchDelegate.java:615)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:829)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:928)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1132)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:50.488
+!MESSAGE Cannot decode string /Test/Sources/main.asm
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForSource(CoreIDEMakefileGenerator.java:3794)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addFragmentMakefileEntriesForSource(CoreIDEMakefileGenerator.java:2936)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addSources(CoreIDEMakefileGenerator.java:2817)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateFragmentMakefile(CoreIDEMakefileGenerator.java:1675)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1246)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:312)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:487)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:650)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2391)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:629)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:133)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate.buildForLaunch(AbstractCLaunchDelegate.java:615)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:829)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:928)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1132)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:50.592
+!MESSAGE Cannot decode string # Tool invocations
+Test.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
+	@echo 'Building target: $@'
+	@echo 'Executing target #2 $@'
+	@echo 'Invoking: S08 Linker'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForTool(CoreIDEMakefileGenerator.java:456)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargetsRules(CoreIDEMakefileGenerator.java:2435)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargets(CoreIDEMakefileGenerator.java:2222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateTopMakefile(CoreIDEMakefileGenerator.java:1907)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1265)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:312)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:487)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:650)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2391)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:629)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:133)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate.buildForLaunch(AbstractCLaunchDelegate.java:615)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:829)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:928)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1132)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.freescale.core.ide.cdt.toolchain 4 0 2014-02-27 22:57:50.594
+!MESSAGE Cannot decode string # Tool invocations
+Test.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
+	@echo 'Building target: $@'
+	@echo 'Executing target #2 $@'
+	@echo 'Invoking: S08 Linker'
+	"$(HC08ToolsEnv)/linker" -ArgFile"Test.args" -O"Test.abs"
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+Test.abs.s19: $(BBL_SRCS) $(EXECUTABLES)
+	@echo 'Executing target #3 $@'
+	@echo 'Invoking: S08 Burner'
+
+!STACK 0
+java.io.UnsupportedEncodingException: cp850.
+	at java.lang.StringCoding.encode(Unknown Source)
+	at java.lang.String.getBytes(Unknown Source)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.isDifferentCodePage(CodePageCalculator.java:117)
+	at com.freescale.core.ide.cdt.toolchain.CodePageCalculator.updateCodePageFlag(CodePageCalculator.java:222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForTool(CoreIDEMakefileGenerator.java:456)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addRuleForTool(CoreIDEMakefileGenerator.java:206)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateRulesForConsumers(CoreIDEMakefileGenerator.java:2605)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargetsRules(CoreIDEMakefileGenerator.java:2445)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.addTargets(CoreIDEMakefileGenerator.java:2222)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.populateTopMakefile(CoreIDEMakefileGenerator.java:1907)
+	at com.freescale.core.ide.cdt.toolchain.CoreIDEMakefileGenerator.generateMakefiles(CoreIDEMakefileGenerator.java:1265)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1806)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:1663)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:1113)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:723)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:634)
+	at org.eclipse.core.internal.events.BuildManager$3.run(BuildManager.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:385)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:388)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:312)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:487)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:650)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2391)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:629)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:133)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate.buildForLaunch(AbstractCLaunchDelegate.java:615)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:829)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:928)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1132)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
