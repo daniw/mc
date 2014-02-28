@@ -1,3 +1,7 @@
 *.exe
 mc/templates
-
+*.aux
+*.log
+*.out
+*.toc
+mc/mccar/peripherie.pdf

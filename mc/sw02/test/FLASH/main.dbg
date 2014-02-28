@@ -3648,8 +3648,8 @@ Stackinit:      LDHX    #(BofStack+1)
 ; Start des Benutzer-Codes
 ;--------------------------------------------------------------------
 main:       
-				BSET		2, PTDDD	; Rear LED aktivieren
-				BSET		2, PTDD		; Rear LED einschalten
+				BSET		2, PTDDD	; Rear LEDs on
+				BSET		2, PTDD
 
 				BSET		1, PTFDD	; Front left red LED on
 				BCLR		1, PTFD
