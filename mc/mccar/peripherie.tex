@@ -26,16 +26,27 @@ Das MC Car beinhaltet verschiedene Peripherie. Dieses Dokument soll einen
 Überblick über die einzelnen Bestandteile der Peripherie und deren Ansteuerung 
 geben. Auf dem MC Car ist folgende Peripherie vorhanden. 
 \begin{itemize}
-  \item LED
-  \item Joystick
-  \item Motor mit Encoder
-  \item Buzzer
-  \item Linien Sensoren
-  \item IR Kommunikation und Objekterkennung
-  \item Farbsensor mit LED
-  \item Beschleunigungssensor
-  \item OLED Display (option)
-  \item Bluetooth Modul (option)
+  \item LED \\
+        I/O (PWM)
+  \item Joystick \\
+        I/O
+  \item Motor mit Encoder \\
+        Motor: I/O (PWM) \\
+        Encoder: I$^2$C / SPI zu Encoder $\mu$C
+  \item Buzzer \\
+        I/O (PWM)
+  \item Linien Sensoren \\
+        I/O / ADC
+  \item IR Kommunikation und Objekterkennung \\
+        I/O / Timer
+  \item Farbsensor mit LED \\
+        I/O / I$^2$C
+  \item Beschleunigungssensor \\
+        I$^2$C
+  \item OLED Display (option) \\
+        I$^2$C
+  \item Bluetooth Modul (option) \\
+        I$^2$C
 \end{itemize}
 
 \section{LED}
