@@ -39,8 +39,35 @@ geben. Auf dem MC Car ist folgende Peripherie vorhanden.
 \end{itemize}
 
 \section{LED}
+Auf dem MC Car sind sowohl vorne als auch hinten LEDs vorhanden. Diese können 
+wie folge mittels der Parallelen I/O Ports angesteuert werden. \\
+\begin{table}[h!]
+\begin{tabular}{lll}
+\rowcolor{white} LED                 & Pin   & aktiv \\
+\rowcolor{lgray} Rear                & PTD2  & High  \\
+\rowcolor{white} Front Left  Red     & PTF1  & Low   \\
+\rowcolor{lgray} Front Left  Green   & PTC4  & Low   \\
+\rowcolor{white} Front Left  Blue    & PTF0  & Low   \\
+\rowcolor{lgray} Front Right Red     & PTF2  & Low   \\
+\rowcolor{white} Front Right Green   & PTC6  & Low   \\
+\rowcolor{lgray} Front Right Blue    & PTE7  & Low   \\
+\end{tabular}
+\end{table}
 
 \section{Joystick}
+Auf dem MC Car ist ein Joystick verbaut. Bei Betätigung werden die 
+entsprechenden Leitungen mit Masse verbunden. Dafür müssen die internen 
+Pull-up Widerstände eingeschaltet werden. 
+\begin{table}[h!]
+\begin{tabular}{llll}
+\rowcolor{white} Richtung    & PTG0  & PTG1  & PTG2  \\
+\rowcolor{lgray} Up          & Low   & Low   & High  \\
+\rowcolor{white} Right       & High  & High  & Low   \\
+\rowcolor{lgray} Down        & Low   & High  & High  \\
+\rowcolor{white} Left        & High  & Low   & High  \\
+\rowcolor{lgray} Push        & High  & Low   & Low   \\
+\end{tabular}
+\end{table}
 
 \section{Motor mit Encoder}
 
