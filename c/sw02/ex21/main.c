@@ -13,6 +13,7 @@
 /*
  * Constants
  */
+#define MAXCHARS 100
 
 /*
  * Function prototypes
@@ -26,16 +27,39 @@ int readLine(char s[], int limit);
  */
 int main(int argc, char** argv)
 {
+    char s[MAXCHARS + 1];
+    int number;
     
+    do
+    {
+        printf("String I should reverse: ");
+        number = readLine(s, MAXCHARS);
+        reverse(s);
+        printf("%s\n", s);
+    }
+    while (number > 1);
     return (0);
 }
 
 /**
+ * Function to reverse a String
  * @author daniw
- * @param s
+ * @param s String to be reversed
  */
 void reverse(char s[])
 {
+    char t;
+    int p1;
+    int p2;
+    for (p1 = 0, p2 = (int) strlen(s) - 1; p1 < p2; p1++, p2--)
+    //while(p1 < p2)
+    {
+        t = s[p2];
+        s[p2] = s[p1];
+        s[p1] = t;
+        //p1++;
+        //p2--;
+    }
     
 }
 
