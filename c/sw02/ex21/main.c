@@ -34,7 +34,8 @@ int main(int argc, char** argv)
     {
         printf("String I should reverse: ");
         number = readLine(s, MAXCHARS);
-        reverse(s);
+        //reverse(s);
+        reversexor(s);
         printf("%s\n", s);
     }
     while (number > 1);
@@ -52,13 +53,29 @@ void reverse(char s[])
     int p1;
     int p2;
     for (p1 = 0, p2 = (int) strlen(s) - 1; p1 < p2; p1++, p2--)
-    //while(p1 < p2)
     {
         t = s[p2];
         s[p2] = s[p1];
         s[p1] = t;
-        //p1++;
-        //p2--;
+    }
+    
+}
+
+/**
+ * Function to reverse a String
+ * The exchanging algorithm is based on exclusive or 
+ * @author daniw
+ * @param s String to be reversed
+ */
+void reversexor(char s[])
+{
+    int p1;
+    int p2;
+    for (p1 = 0, p2 = (int) strlen(s) - 1; p1 < p2; p1++, p2--)
+    {
+        s[p2] ^= s[p1];
+        s[p1] ^= s[p2];
+        s[p2] ^= s[p1];
     }
     
 }
