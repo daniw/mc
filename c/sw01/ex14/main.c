@@ -37,6 +37,7 @@ int main(int argc, char** argv)
     {
         printmenu();
         while (!isalpha(sel = getchar()));
+        fflush(stdin);
         sel = toupper(sel);
         printsel2(sel);
     }    
