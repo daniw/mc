@@ -19,7 +19,7 @@
  * Function prototypes
  */
 void reverse(char s[]);
-void reverse(char s[]);
+void reversexor(char s[]);
 int readLine(char s[], int limit);
 
 /**
