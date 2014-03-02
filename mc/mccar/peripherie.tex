@@ -55,13 +55,13 @@ wie folge mittels der Parallelen I/O Ports angesteuert werden. \\
 \begin{table}[h!]
 \begin{tabular}{lll}
 \rowcolor{white} LED                 & Pin   & aktiv \\
-\rowcolor{lgray} Rear                & PTD2  & High  \\
-\rowcolor{white} Front Left  Red     & PTF1  & Low   \\
-\rowcolor{lgray} Front Left  Green   & PTC4  & Low   \\
-\rowcolor{white} Front Left  Blue    & PTF0  & Low   \\
-\rowcolor{lgray} Front Right Red     & PTF2  & Low   \\
-\rowcolor{white} Front Right Green   & PTC6  & Low   \\
-\rowcolor{lgray} Front Right Blue    & PTE7  & Low   \\
+\rowcolor{lgray} Rear                & PTD2  & 1     \\
+\rowcolor{white} Front Left  Red     & PTF1  & 0     \\
+\rowcolor{lgray} Front Left  Green   & PTC4  & 0     \\
+\rowcolor{white} Front Left  Blue    & PTF0  & 0     \\
+\rowcolor{lgray} Front Right Red     & PTF2  & 0     \\
+\rowcolor{white} Front Right Green   & PTC6  & 0     \\
+\rowcolor{lgray} Front Right Blue    & PTE7  & 0     \\
 \end{tabular}
 \end{table}
 
@@ -72,15 +72,37 @@ Pull-up Widerstände eingeschaltet werden.
 \begin{table}[h!]
 \begin{tabular}{llll}
 \rowcolor{white} Richtung    & PTG0  & PTG1  & PTG2  \\
-\rowcolor{lgray} Up          & Low   & Low   & High  \\
-\rowcolor{white} Right       & High  & High  & Low   \\
-\rowcolor{lgray} Down        & Low   & High  & High  \\
-\rowcolor{white} Left        & High  & Low   & High  \\
-\rowcolor{lgray} Push        & High  & Low   & Low   \\
+\rowcolor{lgray} Up          & 0     & 0     & 1     \\
+\rowcolor{white} Right       & 1     & 1     & 0     \\
+\rowcolor{lgray} Down        & 0     & 1     & 1     \\
+\rowcolor{white} Left        & 1     & 0     & 1     \\
+\rowcolor{lgray} Push        & 1     & 0     & 0     \\
 \end{tabular}
 \end{table}
 
 \section{Motor mit Encoder}
+\begin{table}[h!]
+\begin{tabular}{lllll}
+\rowcolor{white} Aktiver Motor      & PTD4  & PTD5  & PTD6  & PTD7  \\
+\rowcolor{lgray} Rechts vorwärts    & 0     & 1     & 0     & 0     \\
+\rowcolor{white} Rechts rückwärts   & 1     & 0     & 0     & 0     \\
+\rowcolor{lgray} Links vorwärts     & 0     & 0     & 1     & 0     \\
+\rowcolor{white} Links rückwärts    & 0     & 0     & 0     & 1     \\
+\end{tabular}
+\caption{Direkte Ansteuerung}
+\end{table}
+\begin{table}[h!]
+\begin{tabular}{lllllll}
+\rowcolor{white} Aktiver Motor      & PTD4  & PTD5  & PTD6  & PTD7  & PTF4  & PTF5  \\
+\rowcolor{lgray} Rechts vorwärts    & 0     & Z     & 0     & 0     & PWM   & PWM   \\
+\rowcolor{white} Rechts rückwärts   & Z     & 0     & 0     & 0     & PWM   & PWM   \\
+\rowcolor{lgray} Links vorwärts     & 0     & 0     & Z     & 0     & PWM   & PWM   \\
+\rowcolor{white} Links rückwärts    & 0     & 0     & 0     & Z     & PWM   & PWM   \\
+\end{tabular}
+\caption{Ansteuerung mit PWM}
+\end{table}
+
+
 
 \section{Buzzer}
 
