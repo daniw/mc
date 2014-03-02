@@ -3648,6 +3648,13 @@ Stackinit:      LDHX    #(BofStack+1)
 ; Start des Benutzer-Codes
 ;--------------------------------------------------------------------
 main:       
+				BCLR		0, PTGDD	; Pins for Joystick as input with Pul-Ups enabled
+				BCLR		1, PTGDD
+				BCLR		2, PTGDD
+				LDA			PTGPE
+				ORA			#$07
+				STA			PTGPE
+
 				BSET		2, PTDDD	; Rear LEDs on
 				BSET		2, PTDD
 
