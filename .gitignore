@@ -5,4 +5,4 @@ mc/templates
 *.out
 *.toc
 mc/mccar/peripherie.pdf
-mc/cw_workspace/
+mc/cw_workspace/*
