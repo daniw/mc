@@ -3679,11 +3679,76 @@ main:
 				BSET		2, PTCDD	; White LED on bottom side on
 				BSET		2, PTCD
 
+Joystick:		LDA			PTGD		; Read Joystick
+				AND			#$07
+				CMP			#$04		; Case Up
+				BEQ			Up
+				CMP			#$06		; Case Down
+				BEQ			Down
+				CMP			#$03		; Case Right
+				BEQ			Right
+				CMP			#$05		; Case Left
+				BEQ			Left
+				CMP			#$02		; Case Push
+				BEQ			Push
+				JMP			Joystick	; Else Do nothing
+
+
 EndLoop:        BRA     *               ; Endlos-Loop (=Programmende falls weiter oben Loop vergessen wurde)
                 
 
+Up:				BCLR		2, PTDD	; Rear LEDs off
+				BCLR		1, PTFD	; Front left red LED off
+				BCLR		4, PTCD	; Front left green LED off
+				BCLR		0, PTFD	; Front left blue LED off
+				BCLR		2, PTFD	; Front right red LED off
+				BCLR		6, PTCD	; Front right green LED off
+				BCLR		7, PTED	; Front right blue LED off
+				BCLR		2, PTCD	; White LED on bottom side off
+				JMP			Joystick
+
+Down:			BSET		2, PTDD	; Rear LEDs off
+				BSET		1, PTFD	; Front left red LED off
+				BSET		4, PTCD	; Front left green LED off
+				BSET		0, PTFD	; Front left blue LED off
+				BSET		2, PTFD	; Front right red LED off
+				BSET		6, PTCD	; Front right green LED off
+				BSET		7, PTED	; Front right blue LED off
+				BCLR		2, PTCD	; White LED on bottom side off
+				JMP			Joystick
 
 
+Right:			BCLR		2, PTDD	; Rear LEDs off
+				BSET		1, PTFD	; Front left red LED off
+				BSET		4, PTCD	; Front left green LED off
+				BSET		0, PTFD	; Front left blue LED off
+				BCLR		2, PTFD	; Front right red LED off
+				BSET		6, PTCD	; Front right green LED off
+				BSET		7, PTED	; Front right blue LED off
+				BCLR		2, PTCD	; White LED on bottom side off
+				JMP			Joystick
+
+
+Left: 			BCLR		2, PTDD	; Rear LEDs off
+				BCLR		1, PTFD	; Front left red LED off
+				BSET		4, PTCD	; Front left green LED off
+				BSET		0, PTFD	; Front left blue LED off
+				BSET		2, PTFD	; Front right red LED off
+				BSET		6, PTCD	; Front right green LED off
+				BSET		7, PTED	; Front right blue LED off
+				BCLR		2, PTCD	; White LED on bottom side off
+				JMP			Joystick
+
+
+Push:			BCLR		2, PTDD	; Rear LEDs off
+				BSET		1, PTFD	; Front left red LED off
+				BSET		4, PTCD	; Front left green LED off
+				BSET		0, PTFD	; Front left blue LED off
+				BSET		2, PTFD	; Front right red LED off
+				BSET		6, PTCD	; Front right green LED off
+				BSET		7, PTED	; Front right blue LED off
+				BCLR		2, PTCD	; White LED on bottom side off
+				JMP			Joystick
 
 ;--------------------------------------------------------------------
 ; dummy - Alle nicht benutzten Interruptvektoren werden hierher

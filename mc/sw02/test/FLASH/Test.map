@@ -23,13 +23,13 @@ Entry point: 0x1960 (_Startup)
 SECTION-ALLOCATION SECTION
 Section Name                    Size  Type     From       To       Segment
 ---------------------------------------------------------------------------------------------
-.init                            182     R     0x1960     0x1A15   ROM
+.init                             60     R     0x1960     0x199B   ROM
 DATEN_STACK                       96   R/W      0x100      0x15F   RAM
 .stack                           128   R/W      0x160      0x1DF   RAM
 .vectSeg0_vect                     2     R     0xFFFE     0xFFFF   .vectSeg0
 
 Summary of section sizes per section type:
-READ_ONLY (R):          B8 (dec:      184)
+READ_ONLY (R):          3E (dec:       62)
 READ_WRITE (R/W):       E0 (dec:      224)
 
 *********************************************************************************************
@@ -45,14 +45,8 @@ OBJECT-ALLOCATION SECTION
 MODULE:                 -- main_asm.obj --
 - PROCEDURES:
      _Startup                                  1960       9       9       0   .init       
-     main                                      1969      2E      46       0   .init       
-     Joystick                                  1997      1D      29       6   .init       
-     Up                                        19B4      13      19       0   .init       
-     Down                                      19C7      13      19       0   .init       
-     Right                                     19DA      13      19       0   .init       
-     Left                                      19ED      13      19       0   .init       
-     Push                                      1A00      13      19       0   .init       
-     dummy                                     1A13       3       3       0   .init       
+     main                                      1969      30      48       0   .init       
+     dummy                                     1999       3       3       0   .init       
 - VARIABLES:
      TofStack                                   100      5F      95       0   DATEN_STACK 
      BofStack                                   15F       1       1       1   DATEN_STACK 
@@ -61,14 +55,14 @@ MODULE:                 -- main_asm.obj --
 MODULE STATISTIC
   Name                                      Data   Code  Const
 ---------------------------------------------------------------------------------------------
-  main_asm.obj                                96    182      0
+  main_asm.obj                                96     60      0
   other                                      128      2      0
 
 *********************************************************************************************
 SECTION USE IN OBJECT-ALLOCATION SECTION
 ---------------------------------------------------------------------------------------------
 SECTION: ".init"
-  _Startup main Joystick Up Down Right Left Push dummy 
+  _Startup main dummy 
 SECTION: "DATEN_STACK"
   TofStack BofStack 
 
@@ -79,14 +73,8 @@ OBJECT LIST SORTED BY ADDRESS
      TofStack                                   100      5F      95       0   DATEN_STACK 
      BofStack                                   15F       1       1       1   DATEN_STACK 
      _Startup                                  1960       9       9       0   .init       
-     main                                      1969      2E      46       0   .init       
-     Joystick                                  1997      1D      29       6   .init       
-     Up                                        19B4      13      19       0   .init       
-     Down                                      19C7      13      19       0   .init       
-     Right                                     19DA      13      19       0   .init       
-     Left                                      19ED      13      19       0   .init       
-     Push                                      1A00      13      19       0   .init       
-     dummy                                     1A13       3       3       0   .init       
+     main                                      1969      30      48       0   .init       
+     dummy                                     1999       3       3       0   .init       
 
 *********************************************************************************************
 UNUSED-OBJECTS SECTION
@@ -103,12 +91,6 @@ COPYDOWN SECTION
 OBJECT-DEPENDENCIES SECTION
 ---------------------------------------------------------------------------------------------
 _Startup                  USES BofStack 
-Joystick                  USES Joystick 
-Up                        USES Joystick 
-Down                      USES Joystick 
-Right                     USES Joystick 
-Left                      USES Joystick 
-Push                      USES Joystick 
 
 *********************************************************************************************
 DEPENDENCY TREE
@@ -126,5 +108,5 @@ STATISTIC SECTION
 ExeFile:
 --------
 Number of blocks to be downloaded: 2
-Total size of all blocks to be downloaded: 184
+Total size of all blocks to be downloaded: 62
 
