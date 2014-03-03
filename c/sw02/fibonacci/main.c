@@ -18,6 +18,7 @@
  * Function prototypes
  */
 void fibonacci(int n);
+void fibonacci2(int n);
 
 /**
  * main
@@ -32,7 +33,7 @@ int main(int argc, char** argv)
         
         printf("Anzahl Fibonacci Zahlen: ");
         scanf("%d", &n);
-        fibonacci(n);
+        fibonacci2(n);
     }
     return (0);
 }
@@ -58,5 +59,32 @@ void fibonacci(int n)
     {
         fib[i] = fib[i-1] + fib[i-2];
         printf("%u\n", fib[i]);
+    }
+}
+
+/**
+ * Function to compute and print fibonacci sequence
+ * This algorithm is optimized to use minimal memory
+ * fib[0] and fib[1] are used alternating to save the actual and the previous 
+ * number. 
+ * @param n Number of elements to be processed
+ */
+void fibonacci2(int n)
+{
+    unsigned int fib[2];
+    int i;
+    
+    fib[0] = 0;
+    fib[1] = 1;
+    printf("%u\n", fib[0]);
+    if (n > 1)
+    {
+        printf("%u\n", fib[1]);
+    }
+    
+    for (i = 2; i < n; i++)
+    {
+        fib[i & 1] += fib[(i & 1) ^ 1];         //binary & replaces % 2
+        printf("%u\n", fib[i & 1]);             //same function but faster
     }
 }
