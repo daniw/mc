@@ -6,3 +6,4 @@ mc/templates
 *.toc
 mc/mccar/peripherie.pdf
 mc/cw_workspace/*
+mc/datasheets/*.pdf
