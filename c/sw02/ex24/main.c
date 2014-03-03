@@ -28,7 +28,7 @@ typedef enum Color_
 /*
  * Function prototypes
  */
-char* printcolor(Color_t c);
+char* colortostring(Color_t c);
 
 /**
  * main
@@ -39,13 +39,17 @@ int main(int argc, char** argv)
     Color_t i;
     for (i = 0; i <= BLUE; i++)
     {
-        printf("%s\n", printcolor(i));
+        printf("%s\n", colortostring(i));
     }
     return (0);
 }
 
-
-char* printcolor(Color_t c)
+/**
+ * Function to print the name of a enum variable from type Color_t
+ * @param c 
+ * @return 
+ */
+char* colortostring(Color_t c)
 {
     switch(c)
     {
