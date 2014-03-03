@@ -93,11 +93,11 @@ Pull-up Widerstände eingeschaltet werden.
 \end{table}
 \begin{table}[h!]
 \begin{tabular}{lllllll}
-\rowcolor{white} Aktiver Motor      & PTD7  & PTD6  & PTD5  & PTD4  & PTF5  & PTF5  & PTF4  \\
-\rowcolor{lgray} Rechts vorwärts    & 0     & 0     & Z     & 0     & PWM   & PWM   & PWM   \\
-\rowcolor{white} Rechts rückwärts   & 0     & 0     & 0     & Z     & PWM   & PWM   & PWM   \\
-\rowcolor{lgray} Links vorwärts     & 0     & Z     & 0     & 0     & PWM   & PWM   & PWM   \\
-\rowcolor{white} Links rückwärts    & Z     & 0     & 0     & 0     & PWM   & PWM   & PWM   \\
+\rowcolor{white} Aktiver Motor      & PTD7  & PTD6  & PTD5  & PTD4  & PTF5  & PTF4  \\
+\rowcolor{lgray} Rechts vorwärts    & 0     & 0     & Z     & 0     & PWM   & PWM   \\
+\rowcolor{white} Rechts rückwärts   & 0     & 0     & 0     & Z     & PWM   & PWM   \\
+\rowcolor{lgray} Links vorwärts     & 0     & Z     & 0     & 0     & PWM   & PWM   \\
+\rowcolor{white} Links rückwärts    & Z     & 0     & 0     & 0     & PWM   & PWM   \\
 \end{tabular}
 \caption{Ansteuerung mit PWM}
 \end{table}
@@ -107,6 +107,46 @@ Der Buzzer ist an PTF3 angeschlossen und kann mittels TPM1CH5 angesteuert
 werden. 
 
 \section{Linien Sensoren}
+Damit der MC Car einer Linie folgen kann, sind an der vorderen Kante des 
+Fahrzeuges Liniensensoren angebracht. Diese bestehen aus IR LEDs und 
+Fotodioden, die sich abwechseln. Damit können insgesamt acht Felder 
+unterschieden werden. 
+\begin{table}[h!]
+\begin{tabular}{ll}
+\rowcolor{white} LED    & Pin   \\
+\rowcolor{lgray} LS-L   & PTA4  \\
+\rowcolor{white} LS-ML  & PTA3  \\
+\rowcolor{lgray} LS-M   & PTA2  \\
+\rowcolor{white} LS-MR  & PTA1  \\
+\rowcolor{lgray} LS-R   & PTA0  \\
+\end{tabular}
+\caption{Pinbelegung LEDs}
+\end{table}
+\begin{table}[h!]
+\begin{tabular}{lll}
+\rowcolor{white} Fotodiode      & I/O   & ADC   \\
+\rowcolor{lgray} links aussen   & PTB7  & ADP7  \\
+\rowcolor{white} links innen    & PTB6  & ADP6  \\
+\rowcolor{lgray} rechts innen   & PTB5  & ADP5  \\
+\rowcolor{white} rechts aussen  & PTB4  & ADP4  \\
+\end{tabular}
+\caption{Pinbelegung Fotodioden}
+\end{table}
+\begin{table}[h!]
+\begin{tabular}{lllll}
+\rowcolor{white} Feld               & LED   & Pin   & Fotodiode & Pin   \\
+\rowcolor{lgray} links aussen       & LS-L  & PTA4  & LA        & PTB7  \\
+\rowcolor{white} links halbaussen   & LS-ML & PTA3  & LA        & PTB7  \\
+\rowcolor{lgray} links halbinnen    & LS-ML & PTA3  & LI        & PTB6  \\
+\rowcolor{white} links innen        & LS-M  & PTA2  & LI        & PTB6  \\
+\rowcolor{lgray} rechts innen       & LS-M  & PTA2  & RI        & PTB5  \\
+\rowcolor{white} rechts halbinnen   & LS-MR & PTA1  & RI        & PTB5  \\
+\rowcolor{lgray} rechts halbaussen  & LS-MR & PTA1  & RA        & PTB4  \\
+\rowcolor{white} rechts aussen      & LS-R  & PTA0  & RA        & PTB4  \\
+\end{tabular}
+\caption{Felder von links nach rechts}
+\end{table}
+
 
 \section{IR Kommunikation und Objekterkennung}
 
