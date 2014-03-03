@@ -64,6 +64,8 @@ main:
 				ORA			#$07
 				STA			PTGPE
 				
+				BCLR		3, PTGDD	; Mode Switch
+
 				BSET		4, PTDDD	; Pins for Motor control
 				BSET		5, PTDDD
 				BSET		6, PTDDD
@@ -77,7 +79,7 @@ main:
 				BCLR		7, PTDD
 				BCLR		4, PTFD
 				BCLR		5, PTFD
-
+				
 				BSET		2, PTDDD	; Rear LEDs on
 				BSET		2, PTDD
 
@@ -115,18 +117,17 @@ Joystick:		LDA			PTGD		; Read Joystick
 				CMP			#$02		; Case Push
 				BEQ			Push
 
-				BCLR		4, PTDD		; Default Stop Motor
-				BCLR		5, PTDD
-				BCLR		6, PTDD
-				BCLR		7, PTDD
-				BCLR		4, PTFD
-				BCLR		5, PTFD
-				
+				LDA			PTGD		; Default If Mode Switch not set stop motors
+				AND			#$08
+				CMP			#$00
+				BEQ			Stopjmp
+								
 				JMP			Joystick	; Repeat for ever
 
 
 EndLoop:        BRA     *               ; Endlos-Loop (=Programmende falls weiter oben Loop vergessen wurde)
                 
+Stopjmp:		JMP			Stop
 
 Up:				BCLR		2, PTDD		; Rear LEDs off
 				BCLR		1, PTFD		; Front left red LED off
@@ -208,6 +209,15 @@ Push:			BCLR		2, PTDD		; Rear LEDs off
 				BCLR		5, PTDD
 				BSET		6, PTDD
 				BCLR		7, PTDD
+
+				JMP			Joystick
+
+Stop:			BCLR		4, PTDD		; Stop Motor
+				BCLR		5, PTDD
+				BCLR		6, PTDD
+				BCLR		7, PTDD
+				BCLR		4, PTFD
+				BCLR		5, PTFD
 
 				JMP			Joystick
 
