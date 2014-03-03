@@ -44,21 +44,21 @@ int main(int argc, char** argv)
  */
 void fibonacci(int n)
 {
-    unsigned int fib[n];
+    unsigned long long fib[n];
     int i;
     
     fib[0] = 0;
-    printf("%u\n", fib[0]);
+    printf("%llu\n", fib[0]);
     if (n > 1)
     {
         fib[1] = 1;
-        printf("%u\n", fib[1]);
+        printf("%llu\n", fib[1]);
     }
     
     for (i = 2; i < n; i++)
     {
         fib[i] = fib[i-1] + fib[i-2];
-        printf("%u\n", fib[i]);
+        printf("%llu\n", fib[i]);
     }
 }
 
@@ -71,20 +71,20 @@ void fibonacci(int n)
  */
 void fibonacci2(int n)
 {
-    unsigned int fib[2];
+    unsigned long long fib[2];
     int i;
     
     fib[0] = 0;
     fib[1] = 1;
-    printf("%u\n", fib[0]);
+    printf("%llu\n", fib[0]);
     if (n > 1)
     {
-        printf("%u\n", fib[1]);
+        printf("%llu\n", fib[1]);
     }
     
     for (i = 2; i < n; i++)
     {
         fib[i & 1] += fib[(i & 1) ^ 1];         //binary & replaces % 2
-        printf("%u\n", fib[i & 1]);             //same function but faster
+        printf("%llu\n", fib[i & 1]);             //same function but faster
     }
 }
