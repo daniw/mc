@@ -26,6 +26,8 @@ Das MC Car beinhaltet verschiedene Peripherie. Dieses Dokument soll einen
 Überblick über die einzelnen Bestandteile der Peripherie und deren Ansteuerung 
 geben. Auf dem MC Car ist folgende Peripherie vorhanden. 
 \begin{itemize}
+  \item Speisung \\
+        I/O / ADC
   \item LED \\
         I/O (PWM)
   \item Joystick \\
@@ -48,6 +50,22 @@ geben. Auf dem MC Car ist folgende Peripherie vorhanden.
   \item Bluetooth Modul (option) \\
         UART
 \end{itemize}
+
+\section{Speisung}
+Das MC Car wird von einem einzelligen Lithium Polymer Akku mit einer Kapazität 
+von 280 mAh versorgt. Um diesen zu laden ist ein Akkulader integriert. Der 
+Mikrocontroller wird mit einem Low Dropout Spannungsregler gespiesen. Zudem 
+kann die Stromaufnahme des MC Car gemessen werden. 
+\begin{table}[h!]
+\begin{tabular}{ll}
+\rowcolor{white} Funktion       & Pin           \\
+\rowcolor{lgray} Ladestatus     & PTD3          \\
+\rowcolor{white} Akkuspannung   & PTD1 / ADP9   \\
+\rowcolor{lgray} Stromaufnahme  & PTD0 / ADP8   \\
+\rowcolor{white} Schalter       & PTG3          \\
+\end{tabular}
+\caption{}
+\end{table}
 
 \section{LED}
 Auf dem MC Car sind sowohl vorne als auch hinten LEDs vorhanden. Diese können 
