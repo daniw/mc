@@ -107,27 +107,38 @@ main:
 Joystick:		LDA			PTGD		; Read Joystick
 				AND			#$07
 				CMP			#$04		; Case Up
-				BEQ			Up
+				BEQ			Upjmp
 				CMP			#$06		; Case Down
-				BEQ			Down
+				BEQ			Downjmp
 				CMP			#$03		; Case Right
-				BEQ			Right
+				BEQ			Rightjmp
 				CMP			#$05		; Case Left
-				BEQ			Left
+				BEQ			Leftjmp
 				CMP			#$02		; Case Push
-				BEQ			Push
+				BEQ			Pushjmp
 
 				LDA			PTGD		; Default If Mode Switch not set stop motors
 				AND			#$08
 				CMP			#$00
 				BEQ			Stopjmp
-								
+
+Joystickend:	NOP						; Placeholder for any further instruction performed after processing Joystick
+
 				JMP			Joystick	; Repeat for ever
 
+Upjmp:			JSR			Up			; Labels to extend maximal jump distance of branch instructions
+				JMP			Joystickend
+Downjmp:		JSR			Down
+				JMP			Joystickend
+Rightjmp:		JSR			Right
+				JMP			Joystickend
+Leftjmp:		JSR			Left
+				JMP			Joystickend
+Pushjmp:		JSR			Push
+				JMP			Joystickend
+Stopjmp:		JSR			Stop
+				JMP			Joystickend
 
-EndLoop:        BRA     *               ; Endlos-Loop (=Programmende falls weiter oben Loop vergessen wurde)
-                
-Stopjmp:		JMP			Stop
 
 Up:				BCLR		2, PTDD		; Rear LEDs off
 				BCLR		1, PTFD		; Front left red LED off
@@ -143,7 +154,8 @@ Up:				BCLR		2, PTDD		; Rear LEDs off
 				BSET		6, PTDD
 				BCLR		7, PTDD
 
-				JMP			Joystick
+				RTS
+
 
 Down:			BSET		2, PTDD		; Rear LEDs off
 				BSET		1, PTFD		; Front left red LED off
@@ -159,7 +171,7 @@ Down:			BSET		2, PTDD		; Rear LEDs off
 				BCLR		6, PTDD
 				BSET		7, PTDD
 
-				JMP			Joystick
+				RTS
 
 
 Right:			BCLR		2, PTDD		; Rear LEDs off
@@ -176,7 +188,7 @@ Right:			BCLR		2, PTDD		; Rear LEDs off
 				BSET		6, PTDD
 				BCLR		7, PTDD
 
-				JMP			Joystick
+				RTS
 
 
 Left: 			BCLR		2, PTDD		; Rear LEDs off
@@ -193,7 +205,7 @@ Left: 			BCLR		2, PTDD		; Rear LEDs off
 				BCLR		6, PTDD
 				BCLR		7, PTDD
 
-				JMP			Joystick
+				RTS
 
 
 Push:			BCLR		2, PTDD		; Rear LEDs off
@@ -210,7 +222,8 @@ Push:			BCLR		2, PTDD		; Rear LEDs off
 				BSET		6, PTDD
 				BCLR		7, PTDD
 
-				JMP			Joystick
+				RTS
+
 
 Stop:			BCLR		4, PTDD		; Stop Motor
 				BCLR		5, PTDD
@@ -219,7 +232,11 @@ Stop:			BCLR		4, PTDD		; Stop Motor
 				BCLR		4, PTFD
 				BCLR		5, PTFD
 
-				JMP			Joystick
+				RTS
+
+
+EndLoop:        BRA     *               ; Endlos-Loop (=Programmende falls weiter oben Loop vergessen wurde)
+
 
 ;--------------------------------------------------------------------
 ; dummy - Alle nicht benutzten Interruptvektoren werden hierher

@@ -23,13 +23,13 @@ Entry point: 0x1960 (_Startup)
 SECTION-ALLOCATION SECTION
 Section Name                    Size  Type     From       To       Segment
 ---------------------------------------------------------------------------------------------
-.init                            274     R     0x1960     0x1A71   ROM
+.init                            296     R     0x1960     0x1A87   ROM
 DATEN_STACK                       96   R/W      0x100      0x15F   RAM
 .stack                           128   R/W      0x160      0x1DF   RAM
 .vectSeg0_vect                     2     R     0xFFFE     0xFFFF   .vectSeg0
 
 Summary of section sizes per section type:
-READ_ONLY (R):         114 (dec:      276)
+READ_ONLY (R):         12A (dec:      298)
 READ_WRITE (R/W):       E0 (dec:      224)
 
 *********************************************************************************************
@@ -46,15 +46,21 @@ MODULE:                 -- main_asm.obj --
 - PROCEDURES:
      _Startup                                  1960       9       9       0   .init       
      main                                      1969      48      72       0   .init       
-     Joystick                                  19B1      25      37       7   .init       
-     Stopjmp                                   19D6       3       3       0   .init       
-     Up                                        19D9      1B      27       0   .init       
-     Down                                      19F4      1B      27       0   .init       
-     Right                                     1A0F      1B      27       0   .init       
-     Left                                      1A2A      1B      27       0   .init       
-     Push                                      1A45      1B      27       0   .init       
-     Stop                                      1A60       F      15       1   .init       
-     dummy                                     1A6F       3       3       0   .init       
+     Joystick                                  19B1      20      32       1   .init       
+     Joystickend                               19D1       4       4       6   .init       
+     Upjmp                                     19D5       6       6       0   .init       
+     Downjmp                                   19DB       6       6       0   .init       
+     Rightjmp                                  19E1       6       6       0   .init       
+     Leftjmp                                   19E7       6       6       0   .init       
+     Pushjmp                                   19ED       6       6       0   .init       
+     Stopjmp                                   19F3       6       6       0   .init       
+     Up                                        19F9      19      25       1   .init       
+     Down                                      1A12      19      25       1   .init       
+     Right                                     1A2B      19      25       1   .init       
+     Left                                      1A44      19      25       1   .init       
+     Push                                      1A5D      19      25       1   .init       
+     Stop                                      1A76       F      15       1   .init       
+     dummy                                     1A85       3       3       0   .init       
 - VARIABLES:
      TofStack                                   100      5F      95       0   DATEN_STACK 
      BofStack                                   15F       1       1       1   DATEN_STACK 
@@ -63,14 +69,15 @@ MODULE:                 -- main_asm.obj --
 MODULE STATISTIC
   Name                                      Data   Code  Const
 ---------------------------------------------------------------------------------------------
-  main_asm.obj                                96    274      0
+  main_asm.obj                                96    296      0
   other                                      128      2      0
 
 *********************************************************************************************
 SECTION USE IN OBJECT-ALLOCATION SECTION
 ---------------------------------------------------------------------------------------------
 SECTION: ".init"
-  _Startup main Joystick Stopjmp Up Down Right Left Push Stop dummy 
+  _Startup main Joystick Joystickend Upjmp Downjmp Rightjmp Leftjmp Pushjmp 
+  Stopjmp Up Down Right Left Push Stop dummy 
 SECTION: "DATEN_STACK"
   TofStack BofStack 
 
@@ -82,15 +89,21 @@ OBJECT LIST SORTED BY ADDRESS
      BofStack                                   15F       1       1       1   DATEN_STACK 
      _Startup                                  1960       9       9       0   .init       
      main                                      1969      48      72       0   .init       
-     Joystick                                  19B1      25      37       7   .init       
-     Stopjmp                                   19D6       3       3       0   .init       
-     Up                                        19D9      1B      27       0   .init       
-     Down                                      19F4      1B      27       0   .init       
-     Right                                     1A0F      1B      27       0   .init       
-     Left                                      1A2A      1B      27       0   .init       
-     Push                                      1A45      1B      27       0   .init       
-     Stop                                      1A60       F      15       1   .init       
-     dummy                                     1A6F       3       3       0   .init       
+     Joystick                                  19B1      20      32       1   .init       
+     Joystickend                               19D1       4       4       6   .init       
+     Upjmp                                     19D5       6       6       0   .init       
+     Downjmp                                   19DB       6       6       0   .init       
+     Rightjmp                                  19E1       6       6       0   .init       
+     Leftjmp                                   19E7       6       6       0   .init       
+     Pushjmp                                   19ED       6       6       0   .init       
+     Stopjmp                                   19F3       6       6       0   .init       
+     Up                                        19F9      19      25       1   .init       
+     Down                                      1A12      19      25       1   .init       
+     Right                                     1A2B      19      25       1   .init       
+     Left                                      1A44      19      25       1   .init       
+     Push                                      1A5D      19      25       1   .init       
+     Stop                                      1A76       F      15       1   .init       
+     dummy                                     1A85       3       3       0   .init       
 
 *********************************************************************************************
 UNUSED-OBJECTS SECTION
@@ -107,14 +120,13 @@ COPYDOWN SECTION
 OBJECT-DEPENDENCIES SECTION
 ---------------------------------------------------------------------------------------------
 _Startup                  USES BofStack 
-Joystick                  USES Joystick 
-Stopjmp                   USES Stop 
-Up                        USES Joystick 
-Down                      USES Joystick 
-Right                     USES Joystick 
-Left                      USES Joystick 
-Push                      USES Joystick 
-Stop                      USES Joystick 
+Joystickend               USES Joystick 
+Upjmp                     USES Up Joystickend 
+Downjmp                   USES Down Joystickend 
+Rightjmp                  USES Right Joystickend 
+Leftjmp                   USES Left Joystickend 
+Pushjmp                   USES Push Joystickend 
+Stopjmp                   USES Stop Joystickend 
 
 *********************************************************************************************
 DEPENDENCY TREE
@@ -132,5 +144,5 @@ STATISTIC SECTION
 ExeFile:
 --------
 Number of blocks to be downloaded: 2
-Total size of all blocks to be downloaded: 276
+Total size of all blocks to be downloaded: 298
 
