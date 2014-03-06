@@ -85,6 +85,8 @@ void fibonacci2(int n)
     for (i = 2; i < n; i++)
     {
         fib[i & 1] += fib[(i & 1) ^ 1];         //binary & replaces % 2
-        printf("%llu\n", fib[i & 1]);             //same function but faster
+        //fib[i & 1] += fib[!(i & 1)];            //binary & replaces % 2
+        //fib[i & 1] += fib[(~i & 1)];            //binary & replaces % 2
+        printf("%llu\n", fib[i & 1]);           //same function but faster
     }
 }
