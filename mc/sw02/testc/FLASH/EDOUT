@@ -1,0 +1,6 @@
+../Sources\main.c:86:error:C18000 Label not set
+../Sources\main.c:88:error:C18000 Label not set
+../Sources\main.c:90:error:C18000 Label not set
+../Sources\main.c:92:error:C18000 Label not set
+../Sources\main.c:94:error:C18000 Label not set
+../Sources\main.c:99:error:C18000 Label not set
