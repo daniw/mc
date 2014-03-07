@@ -25,6 +25,10 @@ wget -nc http://www.sharpsme.com/download/GP2S60-DSpdf
 cp GP2S60-DSpdf GP2S60-DS.pdf
 
 
+### IR Receiver ###
+wget -nc http://www.vishay.com/docs/82494/tsop752.pdf
+
+
 ### Power supply ###
 
 # Lithium battery controller
