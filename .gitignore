@@ -7,5 +7,5 @@ mc/templates
 mc/mccar/peripherie.pdf
 mc/cw_workspace/*
 mc/datasheets/*.pdf
-mc/datasheets
+mc/datasheets/*
 !mc/datasheets/datasheets.sh
