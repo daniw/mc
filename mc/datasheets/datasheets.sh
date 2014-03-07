@@ -13,7 +13,9 @@ wget -nc http://cache.freescale.com/files/microcontrollers/doc/ref_manual/HCS08R
 wget -nc http://www.adafruit.com/datasheets/SKQUCAA010-ALPS.pdf
 
 
-### H Bridge ###
+### Motor driver ###
+
+# H bridge
 wget -nc http://www.allegromicro.com/~/media/Files/Datasheets/A3901-Datasheet.ashx
 cp A3901-Datasheet.ashx A3901-Datasheet.pdf
 
@@ -25,7 +27,9 @@ wget -nc http://www.sharpsme.com/download/GP2S60-DSpdf
 cp GP2S60-DSpdf GP2S60-DS.pdf
 
 
-### IR receiver ###
+### Obstacle detection and IR communication ###
+
+# IR receiver
 wget -nc http://www.vishay.com/docs/82494/tsop752.pdf
 
 
