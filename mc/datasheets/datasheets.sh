@@ -29,6 +29,12 @@ cp GP2S60-DSpdf GP2S60-DS.pdf
 wget -nc http://www.vishay.com/docs/82494/tsop752.pdf
 
 
+### Line sensor ###
+
+# Phototransistor
+wget -nc https://www.kingbrightusa.com/images/catalog/spec/APT2012P3BT.pdf
+
+
 ### Color sensor ###
 wget -nc http://www.ams.com/eng/content/download/250258/975997/142735
 cp 142735 tcs3414.pdf
