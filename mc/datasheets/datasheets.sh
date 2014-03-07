@@ -35,5 +35,9 @@ wget -nc http://www.onsemi.com/pub_link/Collateral/NCP605-D.PDF
 wget -nc http://diodes.com/datasheets/ZXCT1022.pdf
 
 
+### Accelerometer ###
+wget -nc http://www.freescale.com/files/sensors/doc/data_sheet/MMA8452Q.pdf
+
+
 ### Bluetooth module ###
 wget -nc http://www.e-gizmo.com/KIT/images/EGBT-04/EGBT-045MS-046S%20Bluetooth%20Module%20Manual%20rev%201r0.pdf
