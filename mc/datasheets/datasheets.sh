@@ -9,6 +9,10 @@ wget -nc http://cache.freescale.com/files/microcontrollers/doc/data_sheet/MC9S08
 wget -nc http://cache.freescale.com/files/microcontrollers/doc/ref_manual/HCS08RMV1.pdf
 
 
+### Joystick ###
+wget -nc http://www.adafruit.com/datasheets/SKQUCAA010-ALPS.pdf
+
+
 ### Quadrature encoder ###
 
 # Reflective photointerrupter
