@@ -9,6 +9,13 @@ wget -nc http://cache.freescale.com/files/microcontrollers/doc/data_sheet/MC9S08
 wget -nc http://cache.freescale.com/files/microcontrollers/doc/ref_manual/HCS08RMV1.pdf
 
 
+### Quadrature encoder ###
+
+# Reflective photointerrupter
+wget -nc http://www.sharpsme.com/download/GP2S60-DSpdf
+mv GP2S60-DSpdf GP2S60-DS.pdf
+
+
 ### Power supply ###
 
 # Lithium battery controller
