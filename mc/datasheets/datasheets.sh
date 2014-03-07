@@ -26,6 +26,9 @@ cp A3901-Datasheet.ashx A3901-Datasheet.pdf
 wget -nc http://www.sharpsme.com/download/GP2S60-DSpdf
 cp GP2S60-DSpdf GP2S60-DS.pdf
 
+# Encoder microcontroller
+wget -nc http://cache.freescale.com/files/microcontrollers/doc/data_sheet/MC9S08SH8.pdf
+
 
 ### Obstacle detection and IR communication ###
 
