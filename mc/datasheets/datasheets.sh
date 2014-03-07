@@ -25,8 +25,13 @@ wget -nc http://www.sharpsme.com/download/GP2S60-DSpdf
 cp GP2S60-DSpdf GP2S60-DS.pdf
 
 
-### IR Receiver ###
+### IR receiver ###
 wget -nc http://www.vishay.com/docs/82494/tsop752.pdf
+
+
+### Color sensor ###
+wget -nc http://www.ams.com/eng/content/download/250258/975997/142735
+cp 142735 tcs3414.pdf
 
 
 ### Power supply ###
