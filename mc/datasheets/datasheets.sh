@@ -13,11 +13,16 @@ wget -nc http://cache.freescale.com/files/microcontrollers/doc/ref_manual/HCS08R
 wget -nc http://www.adafruit.com/datasheets/SKQUCAA010-ALPS.pdf
 
 
+### H Bridge ###
+wget -nc http://www.allegromicro.com/~/media/Files/Datasheets/A3901-Datasheet.ashx
+cp A3901-Datasheet.ashx A3901-Datasheet.pdf
+
+
 ### Quadrature encoder ###
 
 # Reflective photointerrupter
 wget -nc http://www.sharpsme.com/download/GP2S60-DSpdf
-mv GP2S60-DSpdf GP2S60-DS.pdf
+cp GP2S60-DSpdf GP2S60-DS.pdf
 
 
 ### Power supply ###
