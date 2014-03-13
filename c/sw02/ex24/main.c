@@ -37,7 +37,7 @@ char* colortostring(Color_t c);
 int main(int argc, char** argv)
 {
     Color_t i;
-    for (i = 0; i <= BLUE; i++)
+    for (i = RED; i <= BLUE; i++)
     {
         printf("%s\n", colortostring(i));
     }
