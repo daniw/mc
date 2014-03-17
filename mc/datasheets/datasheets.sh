@@ -30,6 +30,10 @@ cp GP2S60-DSpdf GP2S60-DS.pdf
 wget -nc http://cache.freescale.com/files/microcontrollers/doc/data_sheet/MC9S08SH8.pdf
 
 
+### Buzzer ###
+wget -nc http://www.murata.com/products/catalog/pdf/p37e.pdf
+
+
 ### Obstacle detection and IR communication ###
 
 # IR receiver
