@@ -56,22 +56,22 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-TestC.abs \
+Ueb2_2.abs \
 
 EXECUTABLES_QUOTED += \
-"TestC.abs" \
+"Ueb2_2.abs" \
 
 EXECUTABLES_OS_FORMAT += \
-TestC.abs \
+Ueb2_2.abs \
 
 BURNER_OUTPUT_OUTPUTS += \
-TestC.abs.s19 \
+Ueb2_2.abs.s19 \
 
 BURNER_OUTPUT_OUTPUTS_QUOTED += \
-"TestC.abs.s19" \
+"Ueb2_2.abs.s19" \
 
 BURNER_OUTPUT_OUTPUTS_OS_FORMAT += \
-TestC.abs.s19 \
+Ueb2_2.abs.s19 \
 
 
 # All Target
@@ -82,30 +82,30 @@ call-burner := 1
 endif
 endif
 ifeq ($(call-burner),1)
-all: TestC.abs TestC.abs.s19
+all: Ueb2_2.abs Ueb2_2.abs.s19
 else
-all: TestC.abs
+all: Ueb2_2.abs
 endif
 
 # Tool invocations
-TestC.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
+Ueb2_2.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
 	@echo 'Building target: $@'
 	@echo 'Executing target #4 $@'
 	@echo 'Invoking: S08 Linker'
-	"$(HC08ToolsEnv)/linker" -ArgFile"TestC.args" -O"TestC.abs"
+	"$(HC08ToolsEnv)/linker" -ArgFile"Ueb2_2.args" -O"Ueb2_2.abs"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-TestC.abs.s19: $(BBL_SRCS) $(EXECUTABLES)
+Ueb2_2.abs.s19: $(BBL_SRCS) $(EXECUTABLES)
 	@echo 'Executing target #5 $@'
 	@echo 'Invoking: S08 Burner'
-	"$(HC08ToolsEnv)/burner" -ArgFile"TestC.abs.args" -f="$<" -env"ABS_FILE=$(strip $(EXECUTABLES_OS_FORMAT))"
+	"$(HC08ToolsEnv)/burner" -ArgFile"Ueb2_2.abs.args" -f="$<" -env"ABS_FILE=$(strip $(EXECUTABLES_OS_FORMAT))"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(S_DEPS_QUOTED) "./*/*/*.obj" "./*/*.obj"  $(CPP_DEPS_QUOTED) $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(BURNER_OUTPUT_OUTPUTS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) $(EXECUTABLES_QUOTED) "./*/*/*.d" "./*/*.d"  $(ProjDirPath)/FLASH/TestC.abs
+	-$(RM) $(S_DEPS_QUOTED) "./*/*/*.obj" "./*/*.obj"  $(CPP_DEPS_QUOTED) $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(BURNER_OUTPUT_OUTPUTS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) $(EXECUTABLES_QUOTED) "./*/*/*.d" "./*/*.d"  $(ProjDirPath)/FLASH/Ueb2_2.abs
 	-@echo ' '
 
 .PHONY: all clean dependents explicit-dependencies warning-messages

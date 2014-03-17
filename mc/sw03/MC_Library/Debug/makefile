@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 3
+#Progress monitor hint: 2
 first : all
 -include ../makefile.init
 
@@ -14,8 +14,6 @@ RM := "$(GNU_Make_Install_DirEnv)/rm" -f
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir.mk
--include Sources/subdir.mk
--include Project_Settings/Linker_Files/subdir.mk
 -include Lib_Sources/_hcs08/subdir.mk
 -include objects.mk
 
@@ -55,57 +53,31 @@ endif
 -include ../makefile.defs
 
 # Add inputs and outputs from these tool invocations to the build variables 
-EXECUTABLES += \
-TestC.abs \
+LIBRARY += \
+MC_Library.lib \
 
-EXECUTABLES_QUOTED += \
-"TestC.abs" \
+LIBRARY_QUOTED += \
+"MC_Library.lib" \
 
-EXECUTABLES_OS_FORMAT += \
-TestC.abs \
-
-BURNER_OUTPUT_OUTPUTS += \
-TestC.abs.s19 \
-
-BURNER_OUTPUT_OUTPUTS_QUOTED += \
-"TestC.abs.s19" \
-
-BURNER_OUTPUT_OUTPUTS_OS_FORMAT += \
-TestC.abs.s19 \
+LIBRARY_OS_FORMAT += \
+MC_Library.lib \
 
 
 # All Target
-call-burner := 0
-ifneq ($(strip $(EXECUTABLES)),)
-ifneq ($(strip $(BBL_SRCS_QUOTED)),)
-call-burner := 1
-endif
-endif
-ifeq ($(call-burner),1)
-all: TestC.abs TestC.abs.s19
-else
-all: TestC.abs
-endif
+all: warning-messages explicit-dependencies MC_Library.lib
 
 # Tool invocations
-TestC.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
+MC_Library.lib: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Executing target #4 $@'
-	@echo 'Invoking: S08 Linker'
-	"$(HC08ToolsEnv)/linker" -ArgFile"TestC.args" -O"TestC.abs"
+	@echo 'Executing target #3 $@'
+	@echo 'Invoking: S08 Libmaker'
+	"$(HC08ToolsEnv)/libmaker" -ArgFile"MC_Library.args"  -cmd( $(OBJS_QUOTED) $(USER_OBJS_QUOTED) $(LIBS_QUOTED) = "MC_Library.lib")
 	@echo 'Finished building target: $@'
-	@echo ' '
-
-TestC.abs.s19: $(BBL_SRCS) $(EXECUTABLES)
-	@echo 'Executing target #5 $@'
-	@echo 'Invoking: S08 Burner'
-	"$(HC08ToolsEnv)/burner" -ArgFile"TestC.abs.args" -f="$<" -env"ABS_FILE=$(strip $(EXECUTABLES_OS_FORMAT))"
-	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(S_DEPS_QUOTED) "./*/*/*.obj" "./*/*.obj"  $(CPP_DEPS_QUOTED) $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(BURNER_OUTPUT_OUTPUTS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) $(EXECUTABLES_QUOTED) "./*/*/*.d" "./*/*.d"  $(ProjDirPath)/FLASH/TestC.abs
+	-$(RM) $(S_DEPS_QUOTED) "./*/*/*.obj"  $(CPP_DEPS_QUOTED) $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(LIBRARY_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) "./*/*/*.d"  $(ProjDirPath)/Debug/MC_Library.lib $(ProjDirPath)/Debug/MC_Library.args $(ProjDirPath)/Debug/MC_Library.lib $(ProjDirPath)/Debug/MC_Library.lst
 	-@echo ' '
 
 .PHONY: all clean dependents explicit-dependencies warning-messages
@@ -113,7 +85,7 @@ clean:
 
 -include ../makefile.targets
 
-explicit-dependencies: ../Project_Settings/Linker_Files/Project.prm 
+explicit-dependencies: 
 
 warning-messages: 
 
