@@ -64,3 +64,8 @@ wget -nc http://www.freescale.com/files/sensors/doc/data_sheet/MMA8452Q.pdf
 
 ### Bluetooth module ###
 wget -nc -O EGBT-045MS-046S.pdf http://www.e-gizmo.com/KIT/images/EGBT-04/EGBT-045MS-046S%20Bluetooth%20Module%20Manual%20rev%201r0.pdf
+
+
+### OLED ###
+wget -nc http://www.displayfuture.com/Display/datasheet/controller/SSD1307.pdf
+wget -nc -O RGS08096032WR001.pdf http://www.eleceltek.ch/pdf/1321453888-0a8e75d4a53622c0a004a82a4accb335.pdf
