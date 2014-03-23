@@ -16,6 +16,9 @@ extern "C" {
 #include <stdlib.h>
 #include <time.h>
 
+#define VALUEMAX  100                   // Maximal value for random numbers
+#define VALUEPREC 1000                  // Used to define random precision
+
 typedef enum meas_prefix_
 {
     YOTTA,
@@ -34,7 +37,8 @@ typedef enum meas_prefix_
     FEMTO,
     ATTO,
     ZEPTO,
-    YOKTO
+    YOKTO,
+    LAST
 } meas_prefix_t;
 
 typedef struct measurement_
@@ -67,12 +71,18 @@ field_t createfield(unsigned int rows, unsigned int columns);
 void fillfield(field_t field, float value, meas_prefix_t prefix);
 
 /**
- * Function to fill the field with faked values and prefixes
+ * Function to fill the field with random values and prefixes
  * Used to simulate an actual measurement
  * The measurements are filled with random values and prefixes
  * @param field     field to be filled with random measurements
  */
-void fakefield(field_t field);
+void simfield(field_t field);
+
+/**
+ * Function to fill the field with values and prefixes as in example
+ * @param field     field to be filled with example measurements
+ */
+void examplefield(field_t field);
 
 /**
  * Function to get one measurement from a field
@@ -80,7 +90,16 @@ void fakefield(field_t field);
  * @param column    column in field, from where the measurement is read
  * @return          measurement
  */
-measurement_t getmeasurement(unsigned int row, unsigned int column);
+measurement_t getmeasurement(field_t field, unsigned int row, unsigned int column);
+
+/**
+ * Function to set one measurement in a field
+ * @param field         field in which the measurement is set
+ * @param row           row in field, in which the measurement is set
+ * @param column        column in field, in which the measurement is set
+ * @param measurement   measurement to be copied to field. 
+ */
+void setmeasurement(field_t field, unsigned int row, unsigned int column, measurement_t measurement);
 
 /**
  * Function to print all the measurements in a field
@@ -93,6 +112,19 @@ void printfield(field_t field);
  * @param measurement   measurement to be printed
  */
 void printmeasurement(measurement_t measurement);
+
+/**
+ * Function that returns a string according to a prefix given
+ * @param prefix    prefix to be turned to a string
+ * @return          pointer to char array that represents the prefix
+ */
+char* prefixtostring(meas_prefix_t prefix);
+
+/**
+ * Function to remove a field
+ * @param field     field to be removed
+ */
+void removefield(field_t field);
 
 #ifdef	__cplusplus
 }
