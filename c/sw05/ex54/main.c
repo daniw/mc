@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 {
     printf("running...\n");
     field_t field;
-    field = createfield(12000, 40000);
+    field = createfield(3, 4);
     examplefield(field);
 //    printfield(field);
     removefield(field);

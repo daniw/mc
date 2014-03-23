@@ -18,6 +18,7 @@ extern "C" {
 
 #define VALUEMAX  100                   // Maximal value for random numbers
 #define VALUEPREC 1000                  // Used to define random precision
+#define MEMLIMIT  400000000             // Limit of entries in field
 
 typedef enum meas_prefix_
 {

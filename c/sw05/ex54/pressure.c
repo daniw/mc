@@ -19,6 +19,11 @@
 field_t createfield(unsigned int rows, unsigned int columns)
 {
     field_t field;
+    if (columns > (MEMLIMIT / rows))
+    {
+        printf("These values exceed an internal limit to prevent excessive memory usage\n");
+        columns = MEMLIMIT / rows;
+    }
     field.rows = rows;
     field.columns = columns;
     field.measurement = (measurement_t**) malloc(rows * sizeof(measurement_t*));
