@@ -202,24 +202,24 @@ char* prefixtostring(meas_prefix_t prefix)
      */
     char *meas_prefix_string[] = 
     {
-        "YOTTA",
-        "ZETTA",
-        "EXA  ",
-        "PETA ",
-        "TERA ",
-        "GIGA ",
-        "MEGA ",
-        "KILO ",
-        "ZERO ",
-        "MILLI",
-        "MIKRO",
-        "NANO ",
-        "PICO ",
-        "FEMTO",
-        "ATTO ",
-        "ZEPTO",
-        "YOKTO",
-        "LAST "
+        "Yotta",
+        "Zetta",
+        "Exa  ",
+        "Peta ",
+        "Tera ",
+        "Giga ",
+        "Mega ",
+        "Kilo ",
+        "Zero ",
+        "Milli",
+        "Mikro",
+        "Nano ",
+        "Pico ",
+        "Femto",
+        "Atto ",
+        "Zepto",
+        "Yokto",
+        "Last "
     };
     return meas_prefix_string[prefix];
 }
