@@ -36,6 +36,35 @@ field_t createfield(unsigned int rows, unsigned int columns)
 }
 
 /**
+ * Function to create an uninitialized measurement field
+ * @param rows    number of rows
+ * @param columns number of columns
+ * @return        struct with pointer to measurements, number of rosw, number of columns
+ */
+field_t createfield2(unsigned int rows, unsigned int columns)
+{
+    field_t field;
+    if (columns > (MEMLIMIT / rows))
+    {
+        printf("These values exceed an internal limit to prevent excessive memory usage\n");
+        columns = MEMLIMIT / rows;
+    }
+    field.rows = rows;
+    field.columns = columns;
+    // allocate memory for pointers
+    field.measurement = (measurement_t**) malloc(rows * sizeof(measurement_t*));
+    // allocate memory for data
+    field.measurement[0] = (measurement_t*) malloc(rows * columns * sizeof(measurement_t));
+    // assign every pointer
+    unsigned int i;
+    for (i = 1; i < rows; i++)
+    {
+        field.measurement[i] = field.measurement[0] + columns * i;
+    }
+    return field;
+}
+
+/**
  * Function to fill the field with one single value and prefix
  * @param field     field to be filled
  * @param value     value to be filled in each measurement in field

@@ -64,6 +64,14 @@ typedef struct field_
 field_t createfield(unsigned int rows, unsigned int columns);
 
 /**
+ * Function to create an uninitialized measurement field
+ * @param rows    number of rows
+ * @param columns number of columns
+ * @return        struct with pointer to measurements, number of rosw, number of columns
+ */
+field_t createfield2(unsigned int rows, unsigned int columns);
+
+/**
  * Function to fill the field with one single value and prefix
  * @param field     field to be filled
  * @param value     value to be filled in each measurement in field
