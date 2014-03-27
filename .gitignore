@@ -9,3 +9,7 @@ mc/cw_workspace/*
 mc/datasheets/*.pdf
 mc/datasheets/*
 !mc/datasheets/datasheets.sh
+/c/sw05/ex54/nbproject/private/
+/c/sw05/ex54_2/nbproject/private/
+/c/sw05/ex54_2/build/Debug/
+/c/sw05/ex54_2/dist/Debug/
