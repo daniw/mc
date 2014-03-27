@@ -43,6 +43,5 @@ int main(int argc, char** argv)
     #endif
     #endif      
     printf("Finished\n");
-    printf("%d",  sizeof(measurement_t));
     return (EXIT_SUCCESS);
 }
