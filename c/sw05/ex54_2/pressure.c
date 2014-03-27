@@ -224,7 +224,10 @@ char* prefixtostring(meas_prefix_t prefix)
     return meas_prefix_string[prefix];
 }
 
-
+/**
+ * Function to remove a field
+ * @param field     field to be removed
+ */
 void removefield(field_t field)
 {
     unsigned int i;
@@ -232,5 +235,16 @@ void removefield(field_t field)
     {
         free(field.measurement[i]);
     }
+    free(field.measurement);
+}
+
+/**
+ * Function to remove a field
+ * @param field     field to be removed
+ */
+void removefield2(field_t field)
+{
+    unsigned int i;
+    free(field.measurement[0]);
     free(field.measurement);
 }

@@ -135,9 +135,14 @@ char* prefixtostring(meas_prefix_t prefix);
  */
 void removefield(field_t field);
 
+/**
+ * Function to remove a field
+ * @param field     field to be removed
+ */
+void removefield2(field_t field);
+
 #ifdef	__cplusplus
 }
 #endif
 
 #endif	/* PRESSURE_H */
-

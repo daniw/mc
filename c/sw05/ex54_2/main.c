@@ -26,20 +26,23 @@ int main(int argc, char** argv)
     printf("running...\n");
     field_t field;
     #ifndef SPEEDTEST
+//        field = createfield(3, 4);
         field = createfield2(3, 4);
         examplefield(field);
         printfield(field);
+//        removefield(field);
+        removefield2(field);
     #else
     #if SPEEDTEST == 1
         field = createfield(SPEEDVALUE1, SPEEDVALUE2);
+        removefield(field);
     #endif
     #if SPEEDTEST == 2
         field = createfield2(SPEEDVALUE1, SPEEDVALUE2);
+        removefield2(field);
     #endif
-    #endif
-    removefield(field);
+    #endif      
     printf("Finished\n");
     printf("%d",  sizeof(measurement_t));
     return (EXIT_SUCCESS);
 }
-
