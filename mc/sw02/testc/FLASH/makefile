@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 3
+#Progress monitor hint: 1
 first : all
 -include ../makefile.init
 
@@ -16,7 +16,6 @@ RM := "$(GNU_Make_Install_DirEnv)/rm" -f
 -include subdir.mk
 -include Sources/subdir.mk
 -include Project_Settings/Linker_Files/subdir.mk
--include Lib_Sources/_hcs08/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -90,14 +89,14 @@ endif
 # Tool invocations
 TestC.abs: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/Project.prm
 	@echo 'Building target: $@'
-	@echo 'Executing target #4 $@'
+	@echo 'Executing target #2 $@'
 	@echo 'Invoking: S08 Linker'
 	"$(HC08ToolsEnv)/linker" -ArgFile"TestC.args" -O"TestC.abs"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 TestC.abs.s19: $(BBL_SRCS) $(EXECUTABLES)
-	@echo 'Executing target #5 $@'
+	@echo 'Executing target #3 $@'
 	@echo 'Invoking: S08 Burner'
 	"$(HC08ToolsEnv)/burner" -ArgFile"TestC.abs.args" -f="$<" -env"ABS_FILE=$(strip $(EXECUTABLES_OS_FORMAT))"
 	@echo 'Finished building: $@'
@@ -105,7 +104,7 @@ TestC.abs.s19: $(BBL_SRCS) $(EXECUTABLES)
 
 # Other Targets
 clean:
-	-$(RM) $(S_DEPS_QUOTED) "./*/*/*.obj" "./*/*.obj"  $(CPP_DEPS_QUOTED) $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(BURNER_OUTPUT_OUTPUTS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) $(EXECUTABLES_QUOTED) "./*/*/*.d" "./*/*.d"  $(ProjDirPath)/FLASH/TestC.abs $(ProjDirPath)/FLASH/TestC.abs $(ProjDirPath)/FLASH/TestC.abs.args $(ProjDirPath)/FLASH/TestC.abs.s19 $(ProjDirPath)/FLASH/TestC.args $(ProjDirPath)/FLASH/TestC.map
+	-$(RM) $(S_DEPS_QUOTED) "./*/*.obj"  $(CPP_DEPS_QUOTED) $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(BURNER_OUTPUT_OUTPUTS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) $(EXECUTABLES_QUOTED) "./*/*.d"  $(ProjDirPath)/FLASH/TestC.abs $(ProjDirPath)/FLASH/TestC.args $(ProjDirPath)/FLASH/TestC.map $(ProjDirPath)/FLASH/TestC.abs $(ProjDirPath)/FLASH/TestC.abs.s19 $(ProjDirPath)/FLASH/TestC.abs.args
 	-@echo ' '
 
 .PHONY: all clean dependents explicit-dependencies warning-messages

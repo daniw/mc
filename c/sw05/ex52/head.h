@@ -23,7 +23,7 @@
 void startText();
 void menu1();
 void back();
-char* read();
+int read();
 void print(int day);
 void choose(char* t);
 void changeW();

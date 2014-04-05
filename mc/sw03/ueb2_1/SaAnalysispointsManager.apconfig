@@ -1,6 +1,6 @@
 <Analysispoints>
 	<Name>AnalysispointsManager</Name>
-	<ProjectPath>C:/Daten/Daniel/studium/git_repo/sem4/mc/mc/sw03/SaAnalysispointsManager.apconfig</ProjectPath>
+	<ProjectPath>Z:/studium/sem4/mc/mc/sw03/ueb2_1/SaAnalysispointsManager.apconfig</ProjectPath>
 	<MaxNumberOfCores>1</MaxNumberOfCores>
 	<Comments>Analysispoints Manager</Comments>
 	<IgnoreAll>false</IgnoreAll>

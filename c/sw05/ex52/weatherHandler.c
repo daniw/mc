@@ -18,15 +18,13 @@
 
 //char* montag = (char*) malloc(sizeof(char)*4);
 void init(){
-montag = {"bewoelkt","14","50","11"};
-/*
-char* dienstag[] = {"bewoelkt","16","14"," 0"};
-char* mittwoch[] = {"sonnig","20","24"," 0"};
-char* donnerstag[] = {"leicht bewoelkt","21","12"," 0"};
-char* freitag[] = {"leicht bewoelkt","19","13"," 0"};
-char* samstag[] = {"bewoelkt","17","21","14"};
-char* sonntag[] = {"Regenschauer","13","25","25"};
-*/
+    char* montag[] = {"bewoelkt","14","50","11"};
+    char* dienstag[] = {"bewoelkt","16","14"," 0"};
+    char* mittwoch[] = {"sonnig","20","24"," 0"};
+    char* donnerstag[] = {"leicht bewoelkt","21","12"," 0"};
+    char* freitag[] = {"leicht bewoelkt","19","13"," 0"};
+    char* samstag[] = {"bewoelkt","17","21","14"};
+    char* sonntag[] = {"Regenschauer","13","25","25"};
 }
 
 /*

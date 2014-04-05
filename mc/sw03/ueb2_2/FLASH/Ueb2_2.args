@@ -5,6 +5,4 @@
 -WmsgSd1100
 -WmsgSd1912 
 -Add("$(ProjDirPath)/FLASH/Sources/main_c.obj"
-"$(ProjDirPath)/FLASH/Lib_Sources/_hcs08/mc9s08jm60_c.obj"
-"$(ProjDirPath)/FLASH/Lib_Sources/_hcs08/start08_c.obj"
 "$(MCUToolsBaseDirEnv)/lib/hc08c/lib/ansiis.lib")

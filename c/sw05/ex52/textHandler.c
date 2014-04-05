@@ -1,6 +1,6 @@
 /*
  * File:   textHandler.c
- * Author: Marco
+ * Author: Marco, daniw
  *
  * Created on 25. März 2014, 22:25
  * 
@@ -26,16 +26,16 @@ void startText(){
  * Diese Befehle stellen die grundlegende Auswahl und Funktion fuer den Anwender dar.
  */
 void menu1(){
-    printf("für welchen Tag möchten Sie die genauen Wetterdaten erhalten?\n\n"
-           "Montag\t\t> 1\n"
-           "Dienstag\t> 2\n"
-           "Mittwoch\t> 3\n"
-           "Donnerstag\t> 4\n"
-           "Freitag\t\t> 5\n"
-           "Samstag\t\t> 6\n"
-           "Sonntag\t\t> 7\n\n"
-           "DAT bearbeiten\t> 8\n\n"
-           "PRG beenden\t> 9\n\n");
+    printf("Für welchen Tag möchten Sie die genauen Wetterdaten erhalten?\n\n"
+           "Montag         > 1\n"
+           "Dienstag       > 2\n"
+           "Mittwoch       > 3\n"
+           "Donnerstag     > 4\n"
+           "Freitag        > 5\n"
+           "Samstag        > 6\n"
+           "Sonntag        > 7\n\n"
+           "DAT bearbeiten > 8\n\n"
+           "PRG beenden    > 9\n\n");
 }
 
 /*
@@ -47,8 +47,9 @@ void menu2(){
     clears();
     startText();
     printf("Menu um die Wetterdaten zu verändern.\n\n"
-           "Fuer den Tag bitte die gewünschte Nummer 1 - 7 fuer die Tage Montag - Sonntag\n"
-           "und fuer das gewünschte Element\n"
+           "Fuer den Tag bitte die gewünschte Nummer 1 - 7 "
+           "für die Tage Montag - Sonntag\n"
+           "und für das gewünschte Element\n"
            "Vorhersage, Temperatur, Windgeschw. oder Regenmenge 1 - 4\n\n");
 }
 
@@ -84,9 +85,10 @@ void clears(){
  * @input  Ohne
  * @return Adresse des char Arrays des Textes.
  */
-char* read(){
+int read(){
+    int text;
     scanf("%d",&text);
-    return &text;
+    return text;
 }
 
 /*
@@ -125,29 +127,11 @@ void print(int day){
 void choose(char* t){
     switch(*t){
         case 1:
-            print(*t-1);
-            back();
-            break;
         case 2:
-            print(*t-1);
-            back();
-            break;
         case 3:
-            print(*t-1);
-            back();
-            break;
         case 4:
-            print(*t-1);
-            back();
-            break;
         case 5:
-            print(*t-1);
-            back();
-            break;
         case 6:
-            print(*t-1);
-            back();
-            break;
         case 7:
             print(*t-1);
             back();
@@ -162,5 +146,6 @@ void choose(char* t){
         default:
             printf("ERROR: Undefinierte Eingabe: %d\n\n", *t);
             quit = FALSE;
+            break;
     }
 }
