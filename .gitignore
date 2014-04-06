@@ -31,3 +31,4 @@ mc/datasheets/*
 /c/sw03/ex41/nbproject/private/
 /c/sw06/addressmanager/dist/Debug/
 /c/sw06/addressmanager/build/Debug/
+/c/sw06/addressmanager/*.txt

@@ -7,6 +7,7 @@
 
 #include "ui.h"
 #include "address.h"
+#include "file.h"
 
 void ui_new(void)
 {
@@ -19,11 +20,9 @@ void ui_new(void)
     printf("%s", ADDSTREETTEXT);
     scanf("%s", data.street);
     printf("%s", ADDNUMBERTEXT);
-//    scanf("%s", data.number);
-    scanf("%s", data.zip);
-    printf("%s", ADDZIPTEXT);
-//    scanf("%s", data.zip);
     scanf("%s", data.number);
+    printf("%s", ADDZIPTEXT);
+    scanf("%s", data.zip);
     printf("%s", ADDCITYTEXT);
     scanf("%s", data.city);
     printf("%s", COMPLETEDTEXT);
@@ -59,7 +58,21 @@ void ui_read(void)
 
 void ui_save(void)
 {
+    nodePtr_t n;
+    data_t data;
+    
     printf("%s", SAVETEXT);
+    
+    openfile("w");
+    writeheadfile();
+    n = getfirst();
+    while(n != NULL)
+    {
+        data = getdata(n);
+        writedatafile(data);
+        n = getnext(n);
+    }
+    closefile();
     
     printf("%s", COMPLETEDTEXT);
     return;
