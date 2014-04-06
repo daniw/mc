@@ -1,19 +1,51 @@
+/* 
+ * File:   ui.c
+ * Author: daniw
+ *
+ * Created on April 5, 2014, 9:32 PM
+ */
+
 #include "ui.h"
+#include "address.h"
 
 void ui_new(void)
 {
+    data_t data;
+    
     printf("%s", ADDFIRSTNAMETEXT);
+    scanf("%s", data.firstname);
     printf("%s", ADDNAMETEXT);
+    scanf("%s", data.name);
     printf("%s", ADDSTREETTEXT);
+    scanf("%s", data.street);
     printf("%s", ADDNUMBERTEXT);
+//    scanf("%s", data.number);
+    scanf("%s", data.zip);
     printf("%s", ADDZIPTEXT);
+//    scanf("%s", data.zip);
+    scanf("%s", data.number);
     printf("%s", ADDCITYTEXT);
+    scanf("%s", data.city);
+    printf("%s", COMPLETEDTEXT);
+    
+    add(data);
+    
     return;
 }
 
 void ui_list(void)
 {
+    nodePtr_t n;
+    data_t data;
+    
     printf("%s", LISTTEXT);
+    n = getfirst();
+    while(n != NULL)
+    {
+        data = getdata(n);
+        ui_printdata(data);
+        n = getnext(n);
+    }
     return;
 }
 
@@ -69,3 +101,10 @@ void ui_version(void)
     return;
 }
 
+void ui_printdata(data_t data)
+{
+    printf("%s%s %s\n",   LISTNAMETEXT,   data.firstname, data.name);
+    printf("%s%s %s\n",   LISTSTREETTEXT, data.street,    data.number);
+    printf("%s%s %s\n\n", LISTCITYTEXT,   data.zip,       data.city);
+    return;
+}

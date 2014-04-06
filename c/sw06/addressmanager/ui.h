@@ -14,11 +14,13 @@ extern "C" {
 
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "address.h"
     
 #define ADDFIRSTNAMETEXT    "Firstname: "
 #define ADDNAMETEXT         "Name:      "
 #define ADDSTREETTEXT       "Street:    "
-#define ADDNUMBERTEXT       "Street n#: "
+#define ADDNUMBERTEXT       "Street no: "
 #define ADDZIPTEXT          "ZIP:       "
 #define ADDCITYTEXT         "City:      "
 #define LISTTEXT            "Here are all addresses listed\n"
@@ -42,6 +44,9 @@ extern "C" {
                             "Source Code available: \n"\
                             "https://github.com/daniw/mc/tree/master/c/sw06/addressmanager\n"
 #define COMPLETEDTEXT       "Completed\n\n"
+#define LISTNAMETEXT        "Name:   "
+#define LISTSTREETTEXT      "Street: "
+#define LISTCITYTEXT        "City:   "
 
 void ui_new(void);
 void ui_list(void);
@@ -52,6 +57,7 @@ void ui_sortstreet(void);
 void ui_sortcity(void);
 void ui_help(void);
 void ui_version(void);
+void ui_printdata(data_t data);
 
 #ifdef	__cplusplus
 }
