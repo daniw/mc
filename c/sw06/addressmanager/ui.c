@@ -20,30 +20,40 @@ void ui_list(void)
 void ui_read(void)
 {
     printf("%s", READTEXT);
+    
+    printf("%s", COMPLETEDTEXT);
     return;
 }
 
-void ui_safe(void)
+void ui_save(void)
 {
-    printf("%s", SAFETEXT);
+    printf("%s", SAVETEXT);
+    
+    printf("%s", COMPLETEDTEXT);
     return;
 }
 
 void ui_sortname(void)
 {
     printf("%s", SORTNAMETEXT);
+    
+    printf("%s", COMPLETEDTEXT);
     return;
 }
 
 void ui_sortstreet(void)
 {
     printf("%s", SORTSTREETTEXT);
+    
+    printf("%s", COMPLETEDTEXT);
     return;
 }
 
 void ui_sortcity(void)
 {
     printf("%s", SORTCITYTEXT);
+    
+    printf("%s", COMPLETEDTEXT);
     return;
 }
 

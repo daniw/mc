@@ -21,37 +21,37 @@ int main(int argc, char** argv)
     while (!isalnum(cmd = getchar()));
     cmd = toupper(cmd);
     switch(cmd)
-    {
-        case 'N':
-            ui_new();
-            break;
-        case 'L':
-            ui_list();
-            break;
-        case 'R':
-            ui_read();
-            break;
-        case 'S':
-            ui_safe();
-            break;
-        case '1':
-            ui_sortname();
-            break;
-        case '2':
-            ui_sortstreet();
-            break;
-        case '3':
-            ui_sortcity();
-            break;
-        case 'H':
-            ui_help();
-            break;
-        case 'V':
-            ui_version();
-            break;
-        default:
-            break;
-    }
+        {
+            case 'N':
+                ui_new();
+                break;
+            case 'L':
+                ui_list();
+                break;
+            case 'R':
+                ui_read();
+                break;
+            case 'S':
+                ui_save();
+                break;
+            case '1':
+                ui_sortname();
+                break;
+            case '2':
+                ui_sortstreet();
+                break;
+            case '3':
+                ui_sortcity();
+                break;
+            case 'H':
+                ui_help();
+                break;
+            case 'V':
+                ui_version();
+                break;
+            default:
+                break;
+        }
     }
     while(cmd != 'Q');
     return (EXIT_SUCCESS);

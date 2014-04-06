@@ -22,14 +22,26 @@ extern "C" {
 #define ADDZIPTEXT          "ZIP:       "
 #define ADDCITYTEXT         "City:      "
 #define LISTTEXT            "Here are all addresses listed\n"
-#define READTEXT            "Reading file\n"
-#define SAFETEXT            "Safing file\n"
-#define SORTNAMETEXT        "Sorting for name\n"
-#define SORTSTREETTEXT      "Sorting for street\n"
-#define SORTCITYTEXT        "Sorting for city\n"
-#define HELPTEXT            "Here comes the help text\n"
-#define VERSIONTEXT         "Here comes the version text\n"
-#define ASKTEXT             "Ask for parameter 1\n"
+#define READTEXT            "Reading file...\n"
+#define SAVETEXT            "Saving file...\n"
+#define SORTNAMETEXT        "Sorting for name...\n"
+#define SORTSTREETTEXT      "Sorting for street...\n"
+#define SORTCITYTEXT        "Sorting for city...\n"
+#define HELPTEXT            "N --> New address\n"\
+                            "L --> List addresses\n"\
+                            "R --> Read addresses from file\n"\
+                            "S --> Save addresses to file\n"\
+                            "1 --> Sort list by name\n"\
+                            "2 --> Sort list by street\n"\
+                            "3 --> Sort list by city\n"\
+                            "H --> Show this help text\n"\
+                            "V --> Show version and licence info\n"\
+                            "Q --> Quit\n\n"
+#define VERSIONTEXT         "Developed by daniw\n"\
+                            "Licenced under GPLv2\n"\
+                            "Source Code available: \n"\
+                            "https://github.com/daniw/mc/tree/master/c/sw06/addressmanager\n"
+#define COMPLETEDTEXT       "Completed\n\n"
 
 void ui_new(void);
 void ui_list(void);
