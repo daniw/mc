@@ -34,6 +34,17 @@ typedef struct data_
 //    char* city;
 //} data_t;
 
+typedef enum fields_
+{
+    FIRSTNAME,
+    NAME,
+    STREET,
+    NUMBER,
+    ZIP,
+    CITY,
+    END
+} fields_t;
+
 typedef struct node_* nodePtr_t;
 
 typedef struct node_

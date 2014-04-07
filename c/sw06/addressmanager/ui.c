@@ -51,7 +51,9 @@ void ui_list(void)
 void ui_read(void)
 {
     printf("%s", READTEXT);
-    
+    openfile("r");
+    readfile();
+    closefile();
     printf("%s", COMPLETEDTEXT);
     return;
 }

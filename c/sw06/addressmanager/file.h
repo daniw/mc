@@ -27,6 +27,8 @@ extern "C" {
 void openfile(char* mode);
 void writeheadfile(void);
 void writedatafile(data_t data);
+void readfile(void);
+char readline(data_t* data);
 void closefile();
 
 #ifdef	__cplusplus
