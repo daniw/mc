@@ -19,15 +19,18 @@ int main(int argc, char** argv)
     ui_help();
     do
     {
-    while (!isalnum(cmd = getchar()));
-    cmd = toupper(cmd);
-    switch(cmd)
+        while (!isalnum(cmd = getchar()));
+        cmd = toupper(cmd);
+        switch(cmd)
         {
             case 'N':
                 ui_new();
                 break;
             case 'L':
                 ui_list();
+                break;
+            case 'D':
+                ui_deleteall();
                 break;
             case 'R':
                 ui_read();

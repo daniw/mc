@@ -30,18 +30,17 @@ void add(data_t data)
     strcpy(n->data.city,        data.city);
 }
 
-/*
-data_t remove(nodePtr_t n)
+data_t removenode(nodePtr_t n)
 {
     data_t data = n->data;
     
     if(n->prev != NULL)
-        n->prev.next = n->next;
+        n->prev->next = n->next;
     else
         head = n->next;
     
     if(n->next != NULL)
-        n->next.prev = n->prev;
+        n->next->prev = n->prev;
     else
         tail = n->prev;
     
@@ -49,7 +48,6 @@ data_t remove(nodePtr_t n)
     
     return data;
 }
-*/
 
 nodePtr_t getfirst(void)
 {

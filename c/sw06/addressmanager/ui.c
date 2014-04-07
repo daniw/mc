@@ -45,6 +45,21 @@ void ui_list(void)
         ui_printdata(data);
         n = getnext(n);
     }
+    
+    return;
+}
+
+void ui_deleteall(void)
+{
+    nodePtr_t n;
+    
+    printf("%s", DELETEALLTEXT);
+    while((n = getfirst()) != NULL)
+    {
+        removenode(n);
+    }
+    printf("%s", COMPLETEDTEXT);
+    
     return;
 }
 
@@ -55,6 +70,7 @@ void ui_read(void)
     readfile();
     closefile();
     printf("%s", COMPLETEDTEXT);
+    
     return;
 }
 
@@ -77,6 +93,7 @@ void ui_save(void)
     closefile();
     
     printf("%s", COMPLETEDTEXT);
+    
     return;
 }
 
@@ -85,6 +102,7 @@ void ui_sortname(void)
     printf("%s", SORTNAMETEXT);
     
     printf("%s", COMPLETEDTEXT);
+    
     return;
 }
 
@@ -93,6 +111,7 @@ void ui_sortstreet(void)
     printf("%s", SORTSTREETTEXT);
     
     printf("%s", COMPLETEDTEXT);
+    
     return;
 }
 
@@ -101,18 +120,21 @@ void ui_sortcity(void)
     printf("%s", SORTCITYTEXT);
     
     printf("%s", COMPLETEDTEXT);
+    
     return;
 }
 
 void ui_help(void)
 {
     printf("%s", HELPTEXT);
+    
     return;
 }
 
 void ui_version(void)
 {
     printf("%s", VERSIONTEXT);
+    
     return;
 }
 
@@ -121,5 +143,6 @@ void ui_printdata(data_t data)
     printf("%s%s %s\n",   LISTNAMETEXT,   data.firstname, data.name);
     printf("%s%s %s\n",   LISTSTREETTEXT, data.street,    data.number);
     printf("%s%s %s\n\n", LISTCITYTEXT,   data.zip,       data.city);
+    
     return;
 }

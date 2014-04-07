@@ -55,7 +55,7 @@ typedef struct node_
 } node_t;
 
 void add(data_t data);
-//data_t remove(nodePtr_t n);
+data_t removenode(nodePtr_t n);
 nodePtr_t getfirst(void);
 nodePtr_t getnext(nodePtr_t n);
 nodePtr_t getprev(nodePtr_t n);

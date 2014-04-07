@@ -24,6 +24,7 @@ extern "C" {
 #define ADDZIPTEXT          "ZIP:       "
 #define ADDCITYTEXT         "City:      "
 #define LISTTEXT            "Here are all addresses listed\n"
+#define DELETEALLTEXT       "Deleting all addresses..."
 #define READTEXT            "Reading from file...\n"
 #define SAVETEXT            "Saving to file...\n"
 #define SORTNAMETEXT        "Sorting for name...\n"
@@ -31,6 +32,7 @@ extern "C" {
 #define SORTCITYTEXT        "Sorting for city...\n"
 #define HELPTEXT            "N --> New address\n"\
                             "L --> List addresses\n"\
+                            "D --> Delete all addresses\n"\
                             "R --> Read addresses from file\n"\
                             "S --> Save addresses to file\n"\
                             "1 --> Sort list by name\n"\
@@ -50,6 +52,7 @@ extern "C" {
 
 void ui_new(void);
 void ui_list(void);
+void ui_deleteall(void);
 void ui_read(void);
 void ui_safe(void);
 void ui_sortname(void);
