@@ -100,7 +100,11 @@ void ui_save(void)
 void ui_sortname(void)
 {
     printf("%s", SORTNAMETEXT);
-    
+    #ifdef SORTENUM
+    sortaddress(getfirst(), NAME);
+    #else
+    sortaddress(getfirst(), getname);
+    #endif
     printf("%s", COMPLETEDTEXT);
     
     return;
@@ -109,7 +113,11 @@ void ui_sortname(void)
 void ui_sortstreet(void)
 {
     printf("%s", SORTSTREETTEXT);
-    
+    #ifdef SORTENUM
+    sortaddress(getfirst(), STREET);
+    #else
+    sortaddress(getfirst(), getstreet);
+    #endif
     printf("%s", COMPLETEDTEXT);
     
     return;
@@ -118,7 +126,11 @@ void ui_sortstreet(void)
 void ui_sortcity(void)
 {
     printf("%s", SORTCITYTEXT);
-    
+    #ifdef SORTENUM
+    sortaddress(getfirst(), CITY);
+    #else
+    sortaddress(getfirst(), getcity);
+    #endif
     printf("%s", COMPLETEDTEXT);
     
     return;
