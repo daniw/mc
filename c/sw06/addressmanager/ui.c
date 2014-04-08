@@ -9,6 +9,9 @@
 #include "address.h"
 #include "file.h"
 
+/**
+ * User interface to add a new address entry
+ */
 void ui_new(void)
 {
     data_t data;
@@ -32,6 +35,9 @@ void ui_new(void)
     return;
 }
 
+/**
+ * User interface to list all addresses
+ */
 void ui_list(void)
 {
     nodePtr_t n;
@@ -49,6 +55,9 @@ void ui_list(void)
     return;
 }
 
+/**
+ * User interface to delete all addresses
+ */
 void ui_deleteall(void)
 {
     nodePtr_t n;
@@ -63,6 +72,9 @@ void ui_deleteall(void)
     return;
 }
 
+/**
+ * User interface to read address data from a file
+ */
 void ui_read(void)
 {
     printf("%s", READTEXT);
@@ -74,6 +86,9 @@ void ui_read(void)
     return;
 }
 
+/**
+ * User interface to save address data to a file
+ */
 void ui_save(void)
 {
     nodePtr_t n;
@@ -97,6 +112,9 @@ void ui_save(void)
     return;
 }
 
+/**
+ * User interface to sort addresses by name
+ */
 void ui_sortname(void)
 {
     printf("%s", SORTNAMETEXT);
@@ -110,6 +128,9 @@ void ui_sortname(void)
     return;
 }
 
+/**
+ * User interface to sort addresses by street
+ */
 void ui_sortstreet(void)
 {
     printf("%s", SORTSTREETTEXT);
@@ -123,6 +144,9 @@ void ui_sortstreet(void)
     return;
 }
 
+/**
+ * User interface to sort addresses by city
+ */
 void ui_sortcity(void)
 {
     printf("%s", SORTCITYTEXT);
@@ -136,6 +160,9 @@ void ui_sortcity(void)
     return;
 }
 
+/**
+ * User interface to print a help text
+ */
 void ui_help(void)
 {
     printf("%s", HELPTEXT);
@@ -143,6 +170,9 @@ void ui_help(void)
     return;
 }
 
+/**
+ * User interface to print version and licence info
+ */
 void ui_version(void)
 {
     printf("%s", VERSIONTEXT);
@@ -150,6 +180,10 @@ void ui_version(void)
     return;
 }
 
+/**
+ * User interface to print one set of data
+ * @param data data to print
+ */
 void ui_printdata(data_t data)
 {
     printf("%s%s %s\n",   LISTNAMETEXT,   data.firstname, data.name);

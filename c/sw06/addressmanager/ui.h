@@ -50,16 +50,60 @@ extern "C" {
 #define LISTSTREETTEXT      "Street: "
 #define LISTCITYTEXT        "City:   "
 
+/**
+ * User interface to add a new address entry
+ */
 void ui_new(void);
+
+/**
+ * User interface to list all addresses
+ */
 void ui_list(void);
+
+/**
+ * User interface to delete all addresses
+ */
 void ui_deleteall(void);
+
+/**
+ * User interface to read address data from a file
+ */
 void ui_read(void);
-void ui_safe(void);
+
+/**
+ * User interface to save address data to a file
+ */
+void ui_save(void);
+
+/**
+ * User interface to sort addresses by name
+ */
 void ui_sortname(void);
+
+/**
+ * User interface to sort addresses by street
+ */
 void ui_sortstreet(void);
+
+/**
+ * User interface to sort addresses by city
+ */
 void ui_sortcity(void);
+
+/**
+ * User interface to print a help text
+ */
 void ui_help(void);
+
+/**
+ * User interface to print version and licence info
+ */
 void ui_version(void);
+
+/**
+ * User interface to print one set of data
+ * @param data data to print
+ */
 void ui_printdata(data_t data);
 
 #ifdef	__cplusplus
