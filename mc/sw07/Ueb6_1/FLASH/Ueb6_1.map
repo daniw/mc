@@ -23,14 +23,14 @@ Entry point: 0x1A40 (_Startup)
 _startupData is allocated at 0x1ADB and uses 6 Bytes
 extern struct _tagStartup {
   unsigned nofZeroOut     0
-  _Copy    *toCopyDownBeg 0x1B19
+  _Copy    *toCopyDownBeg 0x1B1C
 } _startupData;
 
 *********************************************************************************************
 SECTION-ALLOCATION SECTION
 Section Name                    Size  Type     From       To       Segment
 ---------------------------------------------------------------------------------------------
-.text                             44     R     0x1AED     0x1B18   ROM
+.text                             47     R     0x1AED     0x1B1B   ROM
 .abs_section_0                     1   N/I        0x0        0x0   .absSeg0
 .abs_section_1                     1   N/I        0x1        0x1   .absSeg1
 .abs_section_2                     1   N/I        0x2        0x2   .absSeg2
@@ -182,12 +182,12 @@ Section Name                    Size  Type     From       To       Segment
 .startData                        18     R     0x1ADB     0x1AEC   ROM
 .init                            379     R     0x1960     0x1ADA   ROM
 .stack                           512   R/W      0x100      0x2FF   RAM
-.copy                              2     R     0x1B19     0x1B1A   ROM
+.copy                              2     R     0x1B1C     0x1B1D   ROM
 .vectSeg148_vect                  42     R     0xFFC4     0xFFED   .vectSeg148
 .vectSeg149_vect                  16     R     0xFFF0     0xFFFF   .vectSeg149
 
 Summary of section sizes per section type:
-READ_ONLY (R):         1F5 (dec:      501)
+READ_ONLY (R):         1F8 (dec:      504)
 READ_WRITE (R/W):      200 (dec:      512)
 NO_INIT (N/I):          AC (dec:      172)
 
@@ -231,7 +231,8 @@ OBJECT-ALLOCATION SECTION
 ---------------------------------------------------------------------------------------------
 MODULE:                 -- main_c.obj --
 - PROCEDURES:
-     main                                      1AED      2C      44       1   .text       
+     InitTimer                                 1AED      14      20       1   .text       
+     main                                      1B01      1B      27       1   .text       
 - VARIABLES:
 MODULE:                 -- mc9s08jm60_c.obj --
 - PROCEDURES:
@@ -429,7 +430,7 @@ MODULE:                 -- start08_c.obj --
 MODULE STATISTIC
   Name                                      Data   Code  Const
 ---------------------------------------------------------------------------------------------
-  main_c.obj                                   0     44      0
+  main_c.obj                                   0     47      0
   mc9s08jm60_c.obj                           172      0      0
   start08_c.obj                                0    379      0
   other                                      512     76      2
@@ -438,7 +439,7 @@ MODULE STATISTIC
 SECTION USE IN OBJECT-ALLOCATION SECTION
 ---------------------------------------------------------------------------------------------
 SECTION: ".text"
-  main 
+  InitTimer main 
 SECTION: ".init"
   loadByte Init ClearStack initClock _Startup errISR_RTC errISR_IIC 
   errISR_ACMP errISR_ADC errISR_KBI errISR_SCI2T errISR_SCI2R errISR_SCI2E 
@@ -928,7 +929,8 @@ OBJECT LIST SORTED BY ADDRESS
      errISR_LowVoltage                         1ACC       5       5       0   .init       
      errISR_IRQ                                1AD1       5       5       0   .init       
      errISR_SWI                                1AD6       5       5       0   .init       
-     main                                      1AED      2C      44       1   .text       
+     InitTimer                                 1AED      14      20       1   .text       
+     main                                      1B01      1B      27       1   .text       
 
 *********************************************************************************************
 UNUSED-OBJECTS SECTION
@@ -940,7 +942,7 @@ start08_c.obj:
 *********************************************************************************************
 COPYDOWN SECTION
 ---------------------------------------------------------------------------------------------
-------- ROM-ADDRESS: 0x1B19 ---- SIZE       2 ---
+------- ROM-ADDRESS: 0x1B1C ---- SIZE       2 ---
 Filling bytes inserted
  0000
 
@@ -952,7 +954,8 @@ ClearStack                USES __SEG_START_SSTACK
 initClock                 USES _SOPT1 _SPMSC1 _SPMSC2 _MCGTRM _MCGSC _MCGC2 
                                 _MCGC1 _MCGC3 
 _Startup                  USES __SEG_END_SSTACK Init initClock ClearStack main 
-main                      USES _PTFDD _TPM1SC _TPM1MOD _PTFD _SRS 
+InitTimer                 USES _TPM1SC _TPM1MOD 
+main                      USES _PTFDD InitTimer _TPM1SC _PTFD _SRS 
 
 *********************************************************************************************
 DEPENDENCY TREE
@@ -960,7 +963,9 @@ DEPENDENCY TREE
  main and _Startup Group
  | 
  +- main                
- |    
+ |  | 
+ |  +- InitTimer           
+ |       
  +- _Startup            
     | 
     +- Init                
@@ -979,6 +984,6 @@ STATISTIC SECTION
 
 ExeFile:
 --------
-Number of blocks to be downloaded: 5
-Total size of all blocks to be downloaded: 501
+Number of blocks to be downloaded: 6
+Total size of all blocks to be downloaded: 504
 

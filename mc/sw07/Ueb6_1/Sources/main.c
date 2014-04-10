@@ -29,6 +29,14 @@
 
 #define LED 0x04
 
+void InitTimer(void)
+{
+    TPM1SC_PS = PRESC_MASK; // Prescaler 128
+    TPM1MOD = MOD_VALUE;    // Modulo value according to LED Frequency
+    TPM1SC_CLKSx = 2;       // Fixed system clock
+
+}
+
 /**
  * main program
  */
@@ -38,9 +46,7 @@ void main(void)
 
     PTFDD = LED;
 
-    TPM1SC_PS = PRESC_MASK; // Prescaler 128
-    TPM1MOD = MOD_VALUE;    // Modulo value according to LED Frequency
-    TPM1SC_CLKSx = 2;       // Fixed system clock
+    InitTimer();
 
     for(;;)
     {
