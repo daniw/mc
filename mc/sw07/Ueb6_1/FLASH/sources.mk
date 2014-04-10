@@ -91,4 +91,5 @@ OBJS_OS_FORMAT :=
 SUBDIRS := \
 Sources \
 Project_Settings/Linker_Files \
+Lib_Sources/_hcs08 \
 

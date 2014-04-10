@@ -3649,12 +3649,13 @@ Stackinit:      LDHX    #(BofStack+1)
 ;--------------------------------------------------------------------
 main:       
 
-                LDX   #$C1
-Loop:           LDA   ,X
-                EOR   $C0
-                STA   $102B
-                INCX
-                BNE   Loop
+                LDX   #$C1				; Load $C1 to X register
+Loop:           						; repeat
+                LDA   ,X				; 	Load  data from where X register points to
+                EOR   $C0				; 	Compare loaded data with content of 0xC0
+                STA   $102B				; 	Store differences in 0x102B
+                INCX					; 	increment Pointer X
+                BNE   Loop				; until bytes are equal
 
 EndLoop:        BRA     *               ; Endlos-Loop (=Programmende falls weiter oben Loop vergessen wurde)
                 

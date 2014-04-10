@@ -1,7 +1,7 @@
 Units and locations in library 'MC_Library.lib'
 Unit name             size     from       to
-mc9s08jm60_c.obj     75155       73    75228
-start08_c.obj        24109    75228    99337
+mc9s08jm60_c.obj     74967       72    75039
+start08_c.obj        23861    75039    98900
 
 EXPORTED OBJECTS
 CheckStackSize        F   (start08_c.obj)
