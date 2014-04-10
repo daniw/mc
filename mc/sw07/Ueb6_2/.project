@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Ueb6_1</name>
+	<name>Ueb6_2</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -68,11 +68,6 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
 	<linkedResources>
-		<link>
-			<name>FLASH</name>
-			<type>2</type>
-			<locationURI>copy_PARENT/Ueb6_2/FLASH/build-Ueb6_1-FLASH</locationURI>
-		</link>
 		<link>
 			<name>Lib_Headers</name>
 			<type>2</type>
