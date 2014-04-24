@@ -1,4 +1,5 @@
 
+
 Sources/main_c.obj: \
 	Z:/studium/sem4/mc/mc/sw07/Ueb6_3/Sources/../Sources/main.c \
 	Z:/studium/sem4/mc/mc/sw07/MC_Library/Lib_Headers/platform.h \
